@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/profile-banner-v3.svg?v=20260430" alt="Victor Aubry - Data Science and Data Products profile banner" width="100%" />
+<img src="assets/profile-banner-v4.svg?v=20260430b" alt="Victor Aubry - Data Science and Data Products profile banner" width="100%" />
 
 # Victor Aubry
 
