@@ -1,93 +1,164 @@
-<p align="center">
-  <img src="assets/profile-banner.svg" alt="Victor Caucheteux - Data Science and AI Engineering profile banner" width="100%" />
-</p>
+<div align="center">
 
-<p align="center">
-  <a href="https://github.com/VicoD3X?tab=repositories"><img src="https://img.shields.io/badge/Portfolio-GitHub-181717?style=for-the-badge&logo=github" alt="GitHub portfolio" /></a>
-  <img src="https://img.shields.io/badge/Data%20Science-Portfolio-39D98A?style=for-the-badge" alt="Data Science Portfolio" />
-  <img src="https://img.shields.io/badge/AI%20Engineering-Junior-65A7FF?style=for-the-badge" alt="AI Engineering Junior" />
-  <img src="https://img.shields.io/badge/No%20hype-honest%20evaluation-0B2545?style=for-the-badge" alt="Honest evaluation" />
-</p>
+<img src="assets/profile-banner.svg" alt="Victor Aubry - Data Science and AI Engineering profile banner" width="100%" />
 
-## Bonjour, moi c'est Victor
+# Victor Aubry
 
-Je suis **Data Scientist junior**, passionné par l'IA appliquée, les interfaces produit, l'ingénierie, l'aviation, la course automobile et les systèmes techniques ambitieux.
+### Data Scientist · AI Engineer · Applied AI Systems
 
-Mon portfolio est construit autour d'une idée simple : ne pas seulement montrer des notebooks, mais transformer chaque projet en **système lisible, testable et compréhensible**. J'aime relier le modèle, les données, l'API, le dashboard et la documentation pour raconter une démarche complète.
+Je construis des projets data et IA de bout en bout : données, modèles, API, monitoring, reporting et interfaces de restitution.
 
-Aujourd'hui, je cherche à rejoindre une équipe où je peux progresser comme **Data Scientist / AI Engineer junior**, avec un socle solide en Python, machine learning, data pipelines, évaluation critique et interfaces de restitution.
+Mon approche : transformer des jeux de données bruts en systèmes lisibles, testables et exploitables, avec une attention particulière portée à la qualité des données, à l'évaluation critique des modèles et à la clarté des résultats.
 
-## Ce Que Je Construis
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Victor%20Aubry-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victor-aubry-558491325/)
+[![GitHub](https://img.shields.io/badge/GitHub-VicoD3X-181717?logo=github&logoColor=white)](https://github.com/VicoD3X)
+![Python](https://img.shields.io/badge/Python-Data%20Science-3776AB?logo=python&logoColor=white)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Applied%20AI-F7931E)
+![FastAPI](https://img.shields.io/badge/FastAPI-APIs-009688?logo=fastapi&logoColor=white)
+![React](https://img.shields.io/badge/React-Data%20Interfaces-61DAFB?logo=react&logoColor=black)
 
-- **Machine Learning appliqué** : recommandation, NLP, segmentation, scoring, séries temporelles.
-- **Computer Vision** : extraction de features, segmentation sémantique, pipelines distribués.
-- **Analytics produit** : cadrage MVP, KPI, ROI, risques, RGPD, dashboards.
-- **Interfaces data** : Streamlit, React, Vite, dashboards statiques et visualisations propres.
-- **Engineering portfolio** : README solides, tests, CI, séparation des dépendances, données documentées.
+</div>
 
-## Stack Principale
+---
 
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas" />
-  <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy" />
-  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" alt="scikit-learn" />
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" />
-  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" alt="TensorFlow" />
-  <img src="https://img.shields.io/badge/PySpark-E25A1C?style=flat-square&logo=apachespark&logoColor=white" alt="PySpark" />
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" />
-  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" alt="Streamlit" />
-  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=111827" alt="React" />
-  <img src="https://img.shields.io/badge/SQL-0B2545?style=flat-square" alt="SQL" />
-  <img src="https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white" alt="Azure" />
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white" alt="AWS" />
-</p>
+## Signal Principal
 
-## Projets Phares
+Je suis orienté **IA appliquée** : j'aime partir d'un problème concret, structurer les données, entraîner ou évaluer un modèle, exposer les résultats via une API ou une interface, puis documenter les limites de façon honnête.
 
-| Projet | Sujet | Ce Que Le Projet Montre |
+Mon GitHub est organisé comme un **laboratoire technique** : chaque projet important montre une compétence claire.
+
+```text
+Data Quality       -> nettoyer, contrôler, documenter
+Machine Learning   -> modéliser, comparer, évaluer
+Deep Learning      -> NLP, Computer Vision, séries temporelles
+MLOps léger        -> API, monitoring, feedback, reporting
+Data Products      -> Streamlit, React, dashboards, interfaces métier
+```
+
+## Projet Signature
+
+### [Neural-Exchange - Experimental LSTM Market Lab](https://github.com/VicoD3X/neural-exchange)
+
+Neural-Exchange est mon projet personnel le plus expérimental : un laboratoire de prévision de séries temporelles financières avec LSTM PyTorch, données de marché, variables macroéconomiques, signaux de volatilité et indicateur `Panic_Mode`.
+
+Ce projet est important pour moi parce qu'il combine plusieurs sujets qui m'intéressent profondément : modèles séquentiels, mémoire temporelle, visualisation rapide des prédictions, signaux de stress et évaluation critique.
+
+Le point central : le projet ne cherche pas à vendre une “IA qui prédit le marché”. Il montre au contraire une démarche sérieuse :
+
+- reconstruction d'un ancien prototype personnel ;
+- séparation entre legacy et flux actif ;
+- génération de données propres ;
+- entraînement d'un modèle LSTM Rev4 ;
+- sauvegarde modèle, scaler et metadata ;
+- comparaison à des baselines causales ;
+- visualisation réel vs prédiction ;
+- analyse des résidus ;
+- documentation des limites.
+
+Le verdict actuel est volontairement transparent : le LSTM Rev4 ne bat pas la baseline `last_value` sur le MAE. Ce résultat est mis en avant parce qu'il montre que le modèle est évalué face à une référence simple, au lieu d'être présenté avec une courbe isolée.
+
+**Pourquoi ce projet compte :** LSTM · Time Series · PyTorch · macro data · stress signal · baseline comparison · critical evaluation
+
+## Projets Principaux IA / Data
+
+| Projet | Axe | Ce Que Le Projet Démontre |
 |---|---|---|
-| [neural-exchange](https://github.com/VicoD3X/neural-exchange) | LSTM expérimental sur séries financières | Pipeline Rev4 reproductible, baselines causales, graphes, reporting, GitHub Pages |
-| [insight-engine](https://github.com/VicoD3X/insight-engine) | Analytics MVP Fashion-Insta | Extraction Excel, KPI, ROI, risques, RGPD, dashboard React local et GitHub Pages |
-| [spark-vision](https://github.com/VicoD3X/spark-vision) | Computer Vision distribuée | PySpark, MobileNetV2, AWS EMR, S3, extraction modulaire du pipeline |
-| [urban-segmenter](https://github.com/VicoD3X/urban-segmenter) | Segmentation sémantique Cityscapes | U-Net, FastAPI, Streamlit, métriques CV, démonstrateur local |
-| [nlp-sentinel](https://github.com/VicoD3X/nlp-sentinel) | NLP et feedback loop | TF-IDF baseline, FastAPI, Streamlit, monitoring local/Azure, boucle utilisateur |
-| [sql-segmenter](https://github.com/VicoD3X/sql-segmenter) | Segmentation client Olist | SQL, RFM, clustering, maintenance, ARI, pipeline Python testable |
-| [reco-engine](https://github.com/VicoD3X/reco-engine) | Recommandation d'articles | Content-based filtering, Azure Functions, Streamlit, cold-start |
-| [quality-analysis](https://github.com/VicoD3X/quality-analysis) | Audit qualité OpenFoodFacts | Profiling, score qualité explicable, rapport JSON/MD/HTML, Streamlit |
-| [bank-metrics](https://github.com/VicoD3X/bank-metrics) | Portail bancaire React + analytics | Redux, mode démo, transactions mockées, métriques financières, GitHub Pages |
-| [rental-catalog](https://github.com/VicoD3X/rental-catalog) | Catalogue immobilier React | React Router, données JSON locales, UI responsive, GitHub Pages |
+| [neural-exchange](https://github.com/VicoD3X/neural-exchange) | Time Series / LSTM | Prévision expérimentale, séries temporelles financières, baselines causales, analyse critique |
+| [quality-analysis](https://github.com/VicoD3X/quality-analysis) | Data Quality | Nettoyage OpenFoodFacts, contrôles qualité, scoring, reporting JSON/Markdown/HTML, Streamlit |
+| [spark-vision](https://github.com/VicoD3X/spark-vision) | Big Data / Computer Vision | Traitement distribué d'images avec PySpark, AWS EMR et S3 |
+| [nlp-sentinel](https://github.com/VicoD3X/nlp-sentinel) | NLP / MLOps léger | Classification de sentiment, API FastAPI, Streamlit, monitoring, boucle de feedback |
+| [urban-segmenter](https://github.com/VicoD3X/urban-segmenter) | Computer Vision | Segmentation sémantique Cityscapes, U-Net, FastAPI, Streamlit, CI |
+| [sql-segmenter](https://github.com/VicoD3X/sql-segmenter) | SQL / Clustering | Segmentation client Olist, SQL, RFM, K-Means, stabilité temporelle |
 
-## Mon Fil Rouge
+## Data Products Et Interfaces
 
-Je préfère un projet qui dit clairement **ce qu'il fait, ce qu'il ne fait pas et comment le vérifier** plutôt qu'un projet qui survend ses résultats.
+Je garde volontairement une base front-end solide, car un projet data ne vaut vraiment que s'il peut être compris, exploré et utilisé.
 
-Mes standards actuels :
+| Projet | Stack | Rôle |
+|---|---|---|
+| [insight-engine](https://github.com/VicoD3X/insight-engine) | React / Analytics | Dashboard data product issu d'un projet d'analyse et de restitution |
+| [bank-metrics](https://github.com/VicoD3X/bank-metrics) | React / Redux | Portail bancaire démo avec transactions mockées et analytics financier léger |
+| [rental-catalog](https://github.com/VicoD3X/rental-catalog) | React / Vite | SPA catalogue immobilier, routing, composants, GitHub Pages |
+| [reco-engine](https://github.com/VicoD3X/reco-engine) | ML / API / App | Moteur de recommandation avec interface et logique applicative |
 
-- documentation lisible en moins d'une minute ;
-- données et artefacts explicitement documentés ;
-- tests légers mais utiles ;
-- CI quand c'est pertinent ;
-- évaluation critique des modèles ;
-- séparation entre exploration, pipeline et interface ;
-- dashboards sobres, utiles et démontrables.
+## Axes Techniques
 
-## Focus Actuel
+### Machine Learning & IA
 
-- Renforcer mon portfolio pour viser un poste de **Data Scientist / AI Engineer junior**.
-- Continuer à travailler sur des projets hybrides : data, ML, interfaces et storytelling technique.
-- Garder une approche pragmatique : produire des projets propres, honnêtes, lançables et auditables.
+`scikit-learn` · `PyTorch` · `TensorFlow` · `NLP` · `Computer Vision` · `Time Series` · `Clustering` · `Recommandation`
 
-## Quelques Statistiques GitHub
+Je m'intéresse particulièrement aux modèles qui peuvent être expliqués, comparés et évalués proprement. Je préfère un modèle simple avec une évaluation honnête à un modèle complexe présenté sans baseline.
 
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=VicoD3X&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=VicoD3X&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages" />
-</p>
+### Data Engineering Léger
 
-## Me Trouver
+`Python` · `SQL` · `pandas` · `PySpark` · `SQLite` · `pipelines reproductibles` · `data validation` · `reporting`
 
+J'accorde beaucoup d'importance au travail en amont : qualité des données, cohérence des features, documentation des transformations et séparation entre exploration et code stable.
+
+### APIs, MLOps Et Monitoring
+
+`FastAPI` · `Azure Functions` · `Streamlit` · `feedback loop` · `monitoring local` · `GitHub Actions`
+
+Mes projets cherchent à montrer des chaînes complètes : modèle, API, interface, monitoring ou rapport exploitable.
+
+### Interfaces Et Dashboards
+
+`React` · `Vite` · `Redux Toolkit` · `Streamlit` · `GitHub Pages` · `Matplotlib` · `Plotly`
+
+Je sais prototyper des interfaces pour rendre un projet data lisible : dashboards, visualisations, pages de restitution, outils locaux d'audit ou démonstrateurs.
+
+## Ce Que Je Cherche À Montrer Ici
+
+Mon GitHub n'est pas une simple archive. C'est un portfolio reconstruit autour de projets qui montrent chacun une compétence utile :
+
+```text
+Neural-Exchange   -> passion LSTM, séries temporelles, évaluation critique
+quality-analysis  -> rigueur data quality et analyse statistique
+spark-vision      -> Big Data, cloud et Computer Vision
+nlp-sentinel      -> NLP, API, monitoring et feedback utilisateur
+urban-segmenter   -> segmentation sémantique et démonstrateur CV
+sql-segmenter     -> SQL, segmentation client et maintenance de modèle
+insight-engine    -> data product et dashboard de restitution
+```
+
+L'objectif est simple : montrer un profil junior déjà professionnalisé, capable de livrer des projets sérieux, documentés, testables et lisibles.
+
+## Stack Actuelle
+
+| Domaine | Outils |
+|---|---|
+| Languages | Python · SQL · JavaScript · JSX |
+| Data | pandas · NumPy · SQLAlchemy · PySpark |
+| ML / DL | scikit-learn · PyTorch · TensorFlow |
+| NLP | TF-IDF · classification · monitoring · feedback loop |
+| Computer Vision | U-Net · segmentation · image processing |
+| APIs | FastAPI · REST · Pydantic · Azure Functions |
+| Apps | Streamlit · React · Vite · Redux Toolkit |
+| Cloud / Tools | Azure · AWS EMR · S3 · GitHub Actions |
+| Dataviz | Matplotlib · Plotly · dashboard UI |
+
+## Positionnement
+
+Je recherche une opportunité en Data Science ou AI Engineering, avec une préférence pour les environnements exigeants : IA appliquée, cybersécurité, défense, data products, qualité de données ou industrialisation légère de modèles.
+
+Ce que je veux construire : des systèmes IA utiles, lisibles et fiables, pas seulement des notebooks.
+
+## Statistiques GitHub
+
+<div align="center">
+
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=VicoD3X&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub stats" />
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=VicoD3X&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages" />
+
+</div>
+
+## Contact
+
+- LinkedIn : [Victor Aubry](https://www.linkedin.com/in/victor-aubry-558491325/)
 - GitHub : [VicoD3X](https://github.com/VicoD3X)
-- Portfolio GitHub Pages : en construction progressive via les projets épinglés
 
-> Ce profil est pensé comme une porte d'entrée : chaque dépôt important doit pouvoir être compris, lancé ou audité sans deviner le contexte.
+<div align="center">
+
+**Applied AI · Data Quality · Forecasting Labs · Computer Vision · NLP · Data Products**
+
+</div>
