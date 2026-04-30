@@ -1,0 +1,31 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07111F"/>
+      <stop offset="0.48" stop-color="#0B2545"/>
+      <stop offset="1" stop-color="#123C69"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="120" y1="80" x2="980" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#39D98A"/>
+      <stop offset="1" stop-color="#65A7FF"/>
+    </linearGradient>
+    <filter id="blur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="38"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="360" rx="34" fill="url(#bg)"/>
+  <circle cx="1010" cy="56" r="160" fill="#39D98A" opacity="0.18" filter="url(#blur)"/>
+  <circle cx="160" cy="310" r="180" fill="#65A7FF" opacity="0.16" filter="url(#blur)"/>
+  <path d="M72 264C168 176 255 214 342 144C429 74 532 82 640 130C748 178 828 211 928 139C998 88 1064 88 1128 126" stroke="url(#accent)" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+  <path d="M72 294C168 206 255 244 342 174C429 104 532 112 640 160C748 208 828 241 928 169C998 118 1064 118 1128 156" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" opacity="0.18"/>
+  <g opacity="0.34">
+    <rect x="790" y="217" width="306" height="74" rx="18" fill="#FFFFFF" opacity="0.08"/>
+    <rect x="814" y="240" width="88" height="10" rx="5" fill="#39D98A"/>
+    <rect x="814" y="262" width="234" height="8" rx="4" fill="#FFFFFF" opacity="0.42"/>
+    <rect x="930" y="240" width="58" height="10" rx="5" fill="#65A7FF"/>
+  </g>
+  <text x="72" y="104" fill="#39D98A" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="800" letter-spacing="5">DATA SCIENCE - AI ENGINEERING - PRODUCT UI</text>
+  <text x="72" y="168" fill="#FFFFFF" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="58" font-weight="900" letter-spacing="-2.8">Victor Caucheteux</text>
+  <text x="72" y="214" fill="#DCE9F7" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="25" font-weight="600">Junior Data Scientist building honest, testable and visual AI projects.</text>
+  <text x="72" y="304" fill="#DCE9F7" font-family="Consolas, Monaco, monospace" font-size="18">reproducible pipelines  |  critical evaluation  |  dashboards  |  portfolio-grade documentation</text>
+</svg>

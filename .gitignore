@@ -1,0 +1,13 @@
+# Local
+.DS_Store
+Thumbs.db
+
+# Generated
+dist/
+build/
+node_modules/
+
+# Secrets
+.env
+*.pem
+*.key
