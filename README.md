@@ -158,7 +158,6 @@ Ce que je veux construire : des systèmes data utiles, lisibles et fiables, pas 
 
 - LinkedIn : [Victor Aubry](https://www.linkedin.com/in/victor-aubry-558491325/)
 - GitHub : [VicoD3X](https://github.com/VicoD3X)
-- Email : [vicaubry.pro@gmail.com](mailto:vicaubry.pro@gmail.com)
 
 <div align="center">
 
