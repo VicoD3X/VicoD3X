@@ -139,11 +139,6 @@ L'ensemble vise à montrer une capacité à reprendre un sujet de bout en bout :
 | Cloud / Tools | Azure · AWS EMR · S3 · GitHub Actions |
 | Dataviz | Matplotlib · Plotly · dashboard UI |
 
-## Positionnement
-
-Je recherche une opportunité en Data Science ou Machine Learning Engineering, avec une préférence pour les environnements où la curiosité, la passion technique et le goût des systèmes bien construits ont une vraie place : cybersécurité, défense, data products, qualité de données ou industrialisation légère de modèles.
-
-Ce que je veux construire : des systèmes data utiles, lisibles et fiables, pas seulement des notebooks.
 
 ## Statistiques GitHub
 
