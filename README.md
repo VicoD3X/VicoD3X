@@ -1,19 +1,19 @@
 <div align="center">
 
-<img src="assets/profile-banner.svg" alt="Victor Aubry - Data Science and AI Engineering profile banner" width="100%" />
+<img src="assets/profile-banner.svg" alt="Victor Aubry - Data Science and Data Products profile banner" width="100%" />
 
 # Victor Aubry
 
-### Data Scientist · AI Engineer · Applied AI Systems
+### Data Scientist · Applied ML · Data Products
 
-Je construis des projets data et IA de bout en bout : données, modèles, API, monitoring, reporting et interfaces de restitution.
+Je construis des projets data, machine learning et produits analytiques de bout en bout : données, modèles, API, monitoring, reporting et interfaces de restitution.
 
 Mon approche : transformer des jeux de données bruts en systèmes lisibles, testables et exploitables, avec une attention particulière portée à la qualité des données, à l'évaluation critique des modèles et à la clarté des résultats.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Victor%20Aubry-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victor-aubry-558491325/)
 [![GitHub](https://img.shields.io/badge/GitHub-VicoD3X-181717?logo=github&logoColor=white)](https://github.com/VicoD3X)
 ![Python](https://img.shields.io/badge/Python-Data%20Science-3776AB?logo=python&logoColor=white)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Applied%20AI-F7931E)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Applied%20ML-F7931E)
 ![FastAPI](https://img.shields.io/badge/FastAPI-APIs-009688?logo=fastapi&logoColor=white)
 ![React](https://img.shields.io/badge/React-Data%20Interfaces-61DAFB?logo=react&logoColor=black)
 
@@ -23,7 +23,7 @@ Mon approche : transformer des jeux de données bruts en systèmes lisibles, tes
 
 ## Signal Principal
 
-Je suis orienté **IA appliquée** : j'aime partir d'un problème concret, structurer les données, entraîner ou évaluer un modèle, exposer les résultats via une API ou une interface, puis documenter les limites de façon honnête.
+Je suis orienté **data appliquée et produits techniques** : j'aime partir d'un problème concret, structurer les données, entraîner ou évaluer un modèle, exposer les résultats via une API ou une interface, puis documenter les limites de façon honnête.
 
 Mon GitHub est organisé comme un **laboratoire technique** : chaque projet important montre une compétence claire.
 
@@ -43,7 +43,7 @@ Neural-Exchange est mon projet personnel le plus expérimental : un laboratoire 
 
 Ce projet est important pour moi parce qu'il combine plusieurs sujets qui m'intéressent profondément : modèles séquentiels, mémoire temporelle, visualisation rapide des prédictions, signaux de stress et évaluation critique.
 
-Le point central : le projet ne cherche pas à vendre une “IA qui prédit le marché”. Il montre au contraire une démarche sérieuse :
+Le point central : le projet ne cherche pas à vendre un modèle miracle qui prédirait le marché. Il montre au contraire une démarche sérieuse :
 
 - reconstruction d'un ancien prototype personnel ;
 - séparation entre legacy et flux actif ;
@@ -59,7 +59,7 @@ Le verdict actuel est volontairement transparent : le LSTM Rev4 ne bat pas la ba
 
 **Pourquoi ce projet compte :** LSTM · Time Series · PyTorch · macro data · stress signal · baseline comparison · critical evaluation
 
-## Projets Principaux IA / Data
+## Projets Principaux Data / ML
 
 | Projet | Axe | Ce Que Le Projet Démontre |
 |---|---|---|
@@ -83,7 +83,7 @@ Je garde volontairement une base front-end solide, car un projet data ne vaut vr
 
 ## Axes Techniques
 
-### Machine Learning & IA
+### Machine Learning Appliqué
 
 `scikit-learn` · `PyTorch` · `TensorFlow` · `NLP` · `Computer Vision` · `Time Series` · `Clustering` · `Recommandation`
 
@@ -139,9 +139,9 @@ L'objectif est simple : montrer un profil junior déjà professionnalisé, capab
 
 ## Positionnement
 
-Je recherche une opportunité en Data Science ou AI Engineering, avec une préférence pour les environnements exigeants : IA appliquée, cybersécurité, défense, data products, qualité de données ou industrialisation légère de modèles.
+Je recherche une opportunité en Data Science ou Machine Learning Engineering, avec une préférence pour les environnements où la curiosité, la passion technique et le goût des systèmes bien construits ont une vraie place : cybersécurité, défense, data products, qualité de données ou industrialisation légère de modèles.
 
-Ce que je veux construire : des systèmes IA utiles, lisibles et fiables, pas seulement des notebooks.
+Ce que je veux construire : des systèmes data utiles, lisibles et fiables, pas seulement des notebooks.
 
 ## Statistiques GitHub
 
@@ -159,6 +159,6 @@ Ce que je veux construire : des systèmes IA utiles, lisibles et fiables, pas se
 
 <div align="center">
 
-**Applied AI · Data Quality · Forecasting Labs · Computer Vision · NLP · Data Products**
+**Applied ML · Data Quality · Forecasting Labs · Computer Vision · NLP · Data Products**
 
 </div>
