@@ -107,9 +107,11 @@ Mes projets cherchent à montrer des chaînes complètes : modèle, API, interfa
 
 Je sais prototyper des interfaces pour rendre un projet data lisible : dashboards, visualisations, pages de restitution, outils locaux d'audit ou démonstrateurs.
 
-## Ce Que Je Cherche À Montrer Ici
+## Lecture Du Portfolio
 
-Mon GitHub n'est pas une simple archive. C'est un portfolio reconstruit autour de projets qui montrent chacun une compétence utile :
+Ce profil regroupe des projets retravaillés pour être lisibles par un recruteur technique : contexte clair, choix méthodologiques explicités, commandes reproductibles, tests lorsque c'est pertinent, et limites documentées.
+
+Chaque dépôt met en avant un angle précis du métier :
 
 ```text
 Neural-Exchange   -> passion LSTM, séries temporelles, évaluation critique
@@ -121,7 +123,7 @@ sql-segmenter     -> SQL, segmentation client et maintenance de modèle
 insight-engine    -> data product et dashboard de restitution
 ```
 
-L'objectif est simple : montrer un profil junior déjà professionnalisé, capable de livrer des projets sérieux, documentés, testables et lisibles.
+L'ensemble vise à montrer une capacité à reprendre un sujet de bout en bout : comprendre les données, stabiliser le code, évaluer les résultats, construire une restitution claire et assumer les limites techniques.
 
 ## Stack Actuelle
 
