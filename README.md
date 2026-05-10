@@ -33,13 +33,13 @@ Je m'intéresse particulièrement aux problématiques de données volumineuses, 
 | [nlp-sentinel](https://github.com/VicoD3X/nlp-sentinel) | NLP, FastAPI, Streamlit, monitoring, feedback utilisateur, boucle MLOps légère |
 | [insight-engine](https://github.com/VicoD3X/insight-engine) | Transformation d'une analyse en outil lisible, dashboard, JSON exploitable, support décisionnel |
 
-Cette sélection sert de chemin de lecture : elle couvre la qualité des données, SQL, machine learning classique, passage à l'échelle, séries temporelles, NLP, API, monitoring et restitution analyste.
+Cette sélection couvre les briques que je veux rendre visibles en priorité : qualité des données, SQL, machine learning classique, passage à l'échelle, séries temporelles, NLP, API, monitoring et restitution analyste.
 
 ## Signal Principal
 
 Je suis orienté **data appliquée et outils analystes** : j'aime partir d'un problème concret, structurer les données, modéliser une approche, évaluer les résultats, puis les rendre exploitables via une API, un rapport ou une interface.
 
-Mon GitHub est organisé comme un **laboratoire technique open-source** : chaque projet important montre une compétence claire et une démarche reproductible.
+Mon GitHub est organisé comme un **laboratoire technique open-source** : chaque projet met en avant un problème, une approche, des commandes de lancement et des limites.
 
 ```text
 Data Quality       -> nettoyer, contrôler, documenter
@@ -51,11 +51,11 @@ Analyst Tooling    -> Streamlit, React, dashboards, rapports exploitables
 
 ## Projet De Référence
 
-[quality-analysis](https://github.com/VicoD3X/quality-analysis) est le dépôt le plus représentatif de ma façon de travailler : partir d'un dataset réel, nettoyer les données, documenter les hypothèses, produire des contrôles qualité, générer un reporting reproductible et exposer les résultats dans une interface locale.
+[quality-analysis](https://github.com/VicoD3X/quality-analysis) est le dépôt le plus représentatif de ma façon de travailler : partir d'un dataset réel, nettoyer les données, documenter les hypothèses, produire des contrôles qualité, générer un rapport reproductible et exposer les résultats dans une interface locale.
 
 Le projet reste volontairement sobre : pas de modèle artificiel, pas de promesse métier excessive, mais un moteur d'audit qualité structuré autour de `Pandas`, de rapports JSON/Markdown/HTML, de tests légers et d'une restitution Streamlit.
 
-Il montre une compétence que je considère centrale en data science appliquée : rendre un jeu de données compréhensible, contrôlable et exploitable avant toute modélisation.
+Il illustre un point central en data science appliquée : rendre un jeu de données compréhensible, contrôlable et exploitable avant toute modélisation.
 
 ## Focus Expérimental
 
@@ -75,19 +75,19 @@ Je m'intéresse particulièrement aux modèles qui peuvent être expliqués, com
 
 `Python` · `SQL` · `Pandas` · `PySpark` · `SQLite` · `pipelines reproductibles` · `data validation` · `reporting`
 
-J'accorde beaucoup d'importance au travail en amont : qualité des données, cohérence des features, documentation des transformations, séparation entre exploration et code stable, et préparation au passage à l'échelle.
+Je travaille d'abord sur l'amont : qualité des données, cohérence des features, documentation des transformations, séparation entre exploration et code stable, et préparation au passage à l'échelle.
 
 ### APIs, MLOps Et Monitoring
 
 `FastAPI` · `Azure Functions` · `Streamlit` · `feedback loop` · `monitoring local` · `GitHub Actions`
 
-Mes projets cherchent à montrer des chaînes complètes : modèle, API, interface, monitoring ou rapport exploitable.
+Plusieurs dépôts couvrent une chaîne complète : modèle, API, interface, monitoring ou rapport exploitable.
 
 ### Interfaces Et Dashboards
 
 `React` · `Vite` · `Redux Toolkit` · `Streamlit` · `GitHub Pages` · `Matplotlib` · `Plotly`
 
-Je sais prototyper des interfaces pour rendre un projet data lisible : dashboards, visualisations, pages de restitution, outils locaux d'audit ou démonstrateurs pour analystes.
+Je prototype aussi les interfaces nécessaires à la restitution : dashboards, visualisations, pages de synthèse, outils locaux d'audit ou démonstrateurs pour analystes.
 
 ## Lecture Du Portfolio
 
@@ -95,7 +95,7 @@ Chaque dépôt met en avant un travail de structuration : contexte du problème,
 
 Les notebooks présents dans certains dépôts servent de trace exploratoire. Sur les projets principaux, la logique stabilisée est progressivement extraite en modules Python, scripts reproductibles, tests et documentation.
 
-L'ensemble vise à montrer une capacité à reprendre un sujet de bout en bout : comprendre les données, stabiliser le code, évaluer les résultats, construire une restitution claire et assumer les limites techniques.
+L'ensemble documente une façon de travailler : comprendre les données, stabiliser le code, évaluer les résultats, construire une restitution claire et assumer les limites techniques.
 
 ## Stack Actuelle
 
