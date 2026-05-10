@@ -23,6 +23,10 @@ Je m'intéresse particulièrement aux problématiques de données volumineuses, 
 
 ---
 
+## Lecture Orientée Data Scientist / Analyst Tooling
+
+Pour une lecture rapide : [freight-network](https://github.com/VicoD3X/freight-network) couvre `NetworkX` et l'analyse de graphes, [spark-vision](https://github.com/VicoD3X/spark-vision) le passage à l'échelle avec `PySpark`, [sql-segmenter](https://github.com/VicoD3X/sql-segmenter) la segmentation et le clustering, et [quality-analysis](https://github.com/VicoD3X/quality-analysis) la qualité de données et le reporting reproductible.
+
 ## Parcours De Lecture Recommandé
 
 | Projet | À Regarder Pour |
