@@ -95,6 +95,8 @@ Je travaille d'abord sur l'amont : qualité des données, cohérence des feature
 
 Plusieurs dépôts couvrent une chaîne complète : modèle, API, interface, monitoring ou rapport exploitable.
 
+En largeur technique, [nlp-sentinel](https://github.com/VicoD3X/nlp-sentinel), [urban-segmenter](https://github.com/VicoD3X/urban-segmenter) et [reco-engine](https://github.com/VicoD3X/reco-engine) montrent des prototypes complets autour du NLP, de la Computer Vision, de la recommandation, des APIs et d'interfaces Streamlit.
+
 ### Interfaces Et Dashboards
 
 `React` · `Vite` · `Redux Toolkit` · `Streamlit` · `GitHub Pages` · `Matplotlib` · `Plotly`
