@@ -35,51 +35,26 @@ MLOps léger        -> API, monitoring, feedback, reporting
 Data Products      -> Streamlit, React, dashboards, interfaces métier
 ```
 
-## Projet Signature
-
-### [Neural-Exchange - Experimental LSTM Market Lab](https://github.com/VicoD3X/neural-exchange)
-
-Neural-Exchange est mon projet personnel le plus expérimental : un laboratoire de prévision de séries temporelles financières avec LSTM PyTorch, données de marché, variables macroéconomiques, signaux de volatilité et indicateur `Panic_Mode`.
-
-Ce projet est important pour moi parce qu'il combine plusieurs sujets qui m'intéressent profondément : modèles séquentiels, mémoire temporelle, visualisation rapide des prédictions, signaux de stress et évaluation critique.
-
-Le point central : le projet ne cherche pas à vendre un modèle miracle qui prédirait le marché. Il montre au contraire une démarche sérieuse :
-
-- reconstruction d'un ancien prototype personnel ;
-- séparation entre legacy et flux actif ;
-- génération de données propres ;
-- entraînement d'un modèle LSTM Rev4 ;
-- sauvegarde modèle, scaler et metadata ;
-- comparaison à des baselines causales ;
-- visualisation réel vs prédiction ;
-- analyse des résidus ;
-- documentation des limites.
-
-Le verdict actuel est volontairement transparent : le LSTM Rev4 ne bat pas la baseline `last_value` sur le MAE. Ce résultat est mis en avant parce qu'il montre que le modèle est évalué face à une référence simple, au lieu d'être présenté avec une courbe isolée.
-
-**Pourquoi ce projet compte :** LSTM · Time Series · PyTorch · macro data · stress signal · baseline comparison · critical evaluation
-
-## Projets Principaux Data / ML
+## Projets Épinglés
 
 | Projet | Axe | Ce Que Le Projet Démontre |
 |---|---|---|
-| [neural-exchange](https://github.com/VicoD3X/neural-exchange) | Time Series / LSTM | Prévision expérimentale, séries temporelles financières, baselines causales, analyse critique |
-| [quality-analysis](https://github.com/VicoD3X/quality-analysis) | Data Quality | Nettoyage OpenFoodFacts, contrôles qualité, scoring, reporting JSON/Markdown/HTML, Streamlit |
-| [spark-vision](https://github.com/VicoD3X/spark-vision) | Big Data / Computer Vision | Traitement distribué d'images avec PySpark, AWS EMR et S3 |
-| [nlp-sentinel](https://github.com/VicoD3X/nlp-sentinel) | NLP / MLOps léger | Classification de sentiment, API FastAPI, Streamlit, monitoring, boucle de feedback |
-| [urban-segmenter](https://github.com/VicoD3X/urban-segmenter) | Computer Vision | Segmentation sémantique Cityscapes, U-Net, FastAPI, Streamlit, CI |
-| [sql-segmenter](https://github.com/VicoD3X/sql-segmenter) | SQL / Clustering | Segmentation client Olist, SQL, RFM, K-Means, stabilité temporelle |
+| [quality-analysis](https://github.com/VicoD3X/quality-analysis) | Data Quality | Rigueur data, nettoyage, contrôles qualité, scoring explicable et reporting reproductible |
+| [sql-segmenter](https://github.com/VicoD3X/sql-segmenter) | SQL / Clustering | Exploration SQL, features RFM, clustering K-Means et analyse de stabilité temporelle |
+| [spark-vision](https://github.com/VicoD3X/spark-vision) | Spark / Passage à l'échelle | Pipeline distribué PySpark, extraction de features Computer Vision, AWS EMR et S3 |
+| [neural-exchange](https://github.com/VicoD3X/neural-exchange) | Time Series / PyTorch | Séries temporelles financières, LSTM expérimental, baselines causales et évaluation critique |
+| [nlp-sentinel](https://github.com/VicoD3X/nlp-sentinel) | NLP / MLOps léger | Classification de sentiment, API FastAPI, Streamlit, monitoring et boucle de feedback |
+| [insight-engine](https://github.com/VicoD3X/insight-engine) | Analyst Tooling | Transformation d'un cadrage produit en pipeline analytique, JSON exploitable et dashboard React |
 
-## Data Products Et Interfaces
+Ces dépôts ont été sélectionnés pour couvrir une chaîne cohérente : qualité des données, SQL, apprentissage classique, passage à l'échelle, séries temporelles, NLP, API, monitoring et restitution analyste.
 
-Je garde volontairement une base front-end solide, car un projet data ne vaut vraiment que s'il peut être compris, exploré et utilisé.
+## Focus Expérimental
 
-| Projet | Stack | Rôle |
-|---|---|---|
-| [insight-engine](https://github.com/VicoD3X/insight-engine) | React / Analytics | Dashboard data product issu d'un projet d'analyse et de restitution |
-| [bank-metrics](https://github.com/VicoD3X/bank-metrics) | React / Redux | Portail bancaire démo avec transactions mockées et analytics financier léger |
-| [rental-catalog](https://github.com/VicoD3X/rental-catalog) | React / Vite | SPA catalogue immobilier, routing, composants, GitHub Pages |
-| [reco-engine](https://github.com/VicoD3X/reco-engine) | ML / API / App | Moteur de recommandation avec interface et logique applicative |
+[Neural-Exchange](https://github.com/VicoD3X/neural-exchange) est mon laboratoire le plus personnel : un projet de prévision de séries temporelles financières avec LSTM PyTorch, données de marché, variables macroéconomiques, signaux de volatilité et indicateur `Panic_Mode`.
+
+Le projet ne cherche pas à vendre un modèle miracle qui prédirait le marché. Il documente une démarche complète : reconstruction d'un ancien prototype, génération de données propres, entraînement Rev4, sauvegarde modèle/scaler/metadata, comparaison à des baselines causales, visualisations et limites.
+
+Le verdict actuel est volontairement transparent : le LSTM Rev4 ne bat pas la baseline `last_value` sur le MAE. Ce résultat est mis en avant parce qu'il montre que le modèle est évalué face à une référence simple, au lieu d'être présenté avec une courbe isolée.
 
 ## Axes Techniques
 
@@ -114,13 +89,12 @@ Ce profil regroupe des projets retravaillés pour être lisibles par un recruteu
 Chaque dépôt met en avant un angle précis du métier :
 
 ```text
-Neural-Exchange   -> passion LSTM, séries temporelles, évaluation critique
-quality-analysis  -> rigueur data quality et analyse statistique
-spark-vision      -> Big Data, cloud et Computer Vision
-nlp-sentinel      -> NLP, API, monitoring et feedback utilisateur
-urban-segmenter   -> segmentation sémantique et démonstrateur CV
-sql-segmenter     -> SQL, segmentation client et maintenance de modèle
-insight-engine    -> data product et dashboard de restitution
+quality-analysis  -> rigueur data quality, contrôles, reporting
+sql-segmenter     -> SQL, feature engineering, clustering
+spark-vision      -> PySpark, cloud, passage à l'échelle
+neural-exchange   -> PyTorch, séries temporelles, évaluation critique
+nlp-sentinel      -> NLP, API, interface, monitoring
+insight-engine    -> restitution analyste, dashboard, décision
 ```
 
 L'ensemble vise à montrer une capacité à reprendre un sujet de bout en bout : comprendre les données, stabiliser le code, évaluer les résultats, construire une restitution claire et assumer les limites techniques.
