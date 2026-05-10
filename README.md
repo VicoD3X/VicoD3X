@@ -14,6 +14,7 @@ Je m'intéresse particulièrement aux problématiques de données volumineuses, 
 [![GitHub](https://img.shields.io/badge/GitHub-VicoD3X-181717?logo=github&logoColor=white)](https://github.com/VicoD3X)
 ![Python](https://img.shields.io/badge/Python-Data%20Science-3776AB?logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas&logoColor=white)
+![NetworkX](https://img.shields.io/badge/NetworkX-Graph%20Analytics-234B6D)
 ![PyTorch](https://img.shields.io/badge/PyTorch-Applied%20ML-EE4C2C?logo=pytorch&logoColor=white)
 ![PySpark](https://img.shields.io/badge/PySpark-Scale%20Ready-E25A1C?logo=apachespark&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Analyst%20APIs-009688?logo=fastapi&logoColor=white)
@@ -26,6 +27,7 @@ Je m'intéresse particulièrement aux problématiques de données volumineuses, 
 
 | Projet | À Regarder Pour |
 |---|---|
+| [freight-network](https://github.com/VicoD3X/freight-network) | NetworkX, graphe orienté pondéré, centralités, PageRank, communautés, analyse de résilience |
 | [quality-analysis](https://github.com/VicoD3X/quality-analysis) | Nettoyage, qualité de données, scoring explicable, reporting automatisé, tests |
 | [sql-segmenter](https://github.com/VicoD3X/sql-segmenter) | SQL, feature engineering, clustering, segmentation client, stabilité temporelle |
 | [spark-vision](https://github.com/VicoD3X/spark-vision) | PySpark, extraction distribuée de features, AWS EMR, S3, logique de passage à l'échelle |
@@ -33,7 +35,7 @@ Je m'intéresse particulièrement aux problématiques de données volumineuses, 
 | [nlp-sentinel](https://github.com/VicoD3X/nlp-sentinel) | NLP, FastAPI, Streamlit, monitoring, feedback utilisateur, boucle MLOps légère |
 | [insight-engine](https://github.com/VicoD3X/insight-engine) | Transformation d'une analyse en outil lisible, dashboard, JSON exploitable, support décisionnel |
 
-Cette sélection couvre les briques que je veux rendre visibles en priorité : qualité des données, SQL, machine learning classique, passage à l'échelle, séries temporelles, NLP, API, monitoring et restitution analyste.
+Cette sélection couvre les briques que je veux rendre visibles en priorité : graph analytics, qualité des données, SQL, machine learning classique, passage à l'échelle, séries temporelles, NLP, API, monitoring et restitution analyste.
 
 ## Signal Principal
 
@@ -48,6 +50,12 @@ Deep Learning      -> NLP, Computer Vision, séries temporelles
 MLOps léger        -> API, monitoring, feedback, reporting
 Analyst Tooling    -> Streamlit, React, dashboards, rapports exploitables
 ```
+
+## Projet Graph Analytics
+
+[freight-network](https://github.com/VicoD3X/freight-network) est la brique la plus directe sur la modélisation en graphe. Le projet part d'un réseau synthétique de fret aérien, construit un graphe orienté pondéré avec `NetworkX`, puis calcule des métriques de centralité, de PageRank, de communautés et de résilience.
+
+L'objectif est volontairement précis : montrer comment transformer un problème logistique en structure graphe, produire des mesures interprétables, tester l'impact du retrait d'un hub et restituer les résultats sous forme de rapports et visualisations.
 
 ## Projet De Référence
 
@@ -104,6 +112,7 @@ L'ensemble documente une façon de travailler : comprendre les données, stabili
 | Languages | Python · SQL · JavaScript · JSX |
 | Data | pandas · NumPy · SQLAlchemy · PySpark |
 | ML / DL | scikit-learn · PyTorch · TensorFlow |
+| Graphes | NetworkX · graphes orientés · centralités · PageRank |
 | NLP | TF-IDF · classification · monitoring · feedback loop |
 | Computer Vision | U-Net · segmentation · image processing |
 | APIs | FastAPI · REST · Pydantic · Azure Functions |
