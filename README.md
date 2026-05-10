@@ -91,7 +91,7 @@ Je sais prototyper des interfaces pour rendre un projet data lisible : dashboard
 
 ## Lecture Du Portfolio
 
-Ce profil regroupe des projets retravaillés pour être lisibles par un recruteur technique : contexte clair, choix méthodologiques explicités, commandes reproductibles, tests lorsque c'est pertinent, et limites documentées.
+Chaque dépôt met en avant un travail de structuration : contexte du problème, choix méthodologiques, commandes reproductibles, tests lorsque c'est pertinent, et limites documentées.
 
 Les notebooks présents dans certains dépôts servent de trace exploratoire. Sur les projets principaux, la logique stabilisée est progressivement extraite en modules Python, scripts reproductibles, tests et documentation.
 
