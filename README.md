@@ -101,6 +101,8 @@ Plusieurs dépôts couvrent une chaîne complète : modèle, API, interface, mon
 
 Je prototype aussi les interfaces nécessaires à la restitution : dashboards, visualisations, pages de synthèse, outils locaux d'audit ou démonstrateurs pour analystes.
 
+En soutien, [bank-metrics](https://github.com/VicoD3X/bank-metrics) montre une interface orientée données avec React/Redux et analytics financiers mockés, tandis que [rental-catalog](https://github.com/VicoD3X/rental-catalog) conserve une base React/Vite plus classique autour du routage, des composants et de GitHub Pages.
+
 ## Lecture Du Portfolio
 
 Chaque dépôt met en avant un travail de structuration : contexte du problème, choix méthodologiques, commandes reproductibles, tests lorsque c'est pertinent, et limites documentées.
