@@ -21,7 +21,7 @@ Je m'intéresse particulièrement aux problématiques de données volumineuses, 
 
 ---
 
-## Projets Recommandés Pour Un Poste Data Scientist Appliqué
+## Parcours De Lecture Recommandé
 
 | Projet | À Regarder Pour |
 |---|---|
