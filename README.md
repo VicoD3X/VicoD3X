@@ -4,11 +4,11 @@
 
 # Victor Aubry
 
-### Data Scientist · Applied ML · Data Products
+### Data Scientist Junior · Applied ML · Analyst Tools
 
-Je construis des projets data, machine learning et produits analytiques de bout en bout : données, modèles, API, monitoring, reporting et interfaces de restitution.
+Data Scientist junior orienté data science appliquée, machine learning, qualité de données et développement d'outils exploitables.
 
-Mon approche : transformer des jeux de données bruts en systèmes lisibles, testables et exploitables, avec une attention particulière portée à la qualité des données, à l'évaluation critique des modèles et à la clarté des résultats.
+Je m'intéresse particulièrement aux problématiques de données volumineuses, de modélisation, d'évaluation rigoureuse des modèles et de mise à disposition des résultats via API, dashboards ou rapports.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Victor%20Aubry-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victor-aubry-558491325/)
 [![GitHub](https://img.shields.io/badge/GitHub-VicoD3X-181717?logo=github&logoColor=white)](https://github.com/VicoD3X)
@@ -21,32 +21,32 @@ Mon approche : transformer des jeux de données bruts en systèmes lisibles, tes
 
 ---
 
+## Projets Recommandés Pour Un Poste Data Scientist Appliqué
+
+| Projet | À Regarder Pour |
+|---|---|
+| [quality-analysis](https://github.com/VicoD3X/quality-analysis) | Nettoyage, qualité de données, scoring explicable, reporting automatisé, tests |
+| [sql-segmenter](https://github.com/VicoD3X/sql-segmenter) | SQL, feature engineering, clustering, segmentation client, stabilité temporelle |
+| [spark-vision](https://github.com/VicoD3X/spark-vision) | PySpark, extraction distribuée de features, AWS EMR, S3, logique de passage à l'échelle |
+| [neural-exchange](https://github.com/VicoD3X/neural-exchange) | PyTorch, séries temporelles, baselines causales, évaluation critique, documentation des limites |
+| [nlp-sentinel](https://github.com/VicoD3X/nlp-sentinel) | NLP, FastAPI, Streamlit, monitoring, feedback utilisateur, boucle MLOps légère |
+| [insight-engine](https://github.com/VicoD3X/insight-engine) | Transformation d'une analyse en outil lisible, dashboard, JSON exploitable, support décisionnel |
+
+Cette sélection sert de chemin de lecture : elle couvre la qualité des données, SQL, machine learning classique, passage à l'échelle, séries temporelles, NLP, API, monitoring et restitution analyste.
+
 ## Signal Principal
 
-Je suis orienté **data appliquée et produits techniques** : j'aime partir d'un problème concret, structurer les données, entraîner ou évaluer un modèle, exposer les résultats via une API ou une interface, puis documenter les limites de façon honnête.
+Je suis orienté **data appliquée et outils analystes** : j'aime partir d'un problème concret, structurer les données, modéliser une approche, évaluer les résultats, puis les rendre exploitables via une API, un rapport ou une interface.
 
-Mon GitHub est organisé comme un **laboratoire technique** : chaque projet important montre une compétence claire.
+Mon GitHub est organisé comme un **laboratoire technique open-source** : chaque projet important montre une compétence claire et une démarche reproductible.
 
 ```text
 Data Quality       -> nettoyer, contrôler, documenter
 Machine Learning   -> modéliser, comparer, évaluer
 Deep Learning      -> NLP, Computer Vision, séries temporelles
 MLOps léger        -> API, monitoring, feedback, reporting
-Data Products      -> Streamlit, React, dashboards, interfaces métier
+Analyst Tooling    -> Streamlit, React, dashboards, rapports exploitables
 ```
-
-## Projets Épinglés
-
-| Projet | Axe | Ce Que Le Projet Démontre |
-|---|---|---|
-| [quality-analysis](https://github.com/VicoD3X/quality-analysis) | Data Quality | Rigueur data, nettoyage, contrôles qualité, scoring explicable et reporting reproductible |
-| [sql-segmenter](https://github.com/VicoD3X/sql-segmenter) | SQL / Clustering | Exploration SQL, features RFM, clustering K-Means et analyse de stabilité temporelle |
-| [spark-vision](https://github.com/VicoD3X/spark-vision) | Spark / Passage à l'échelle | Pipeline distribué PySpark, extraction de features Computer Vision, AWS EMR et S3 |
-| [neural-exchange](https://github.com/VicoD3X/neural-exchange) | Time Series / PyTorch | Séries temporelles financières, LSTM expérimental, baselines causales et évaluation critique |
-| [nlp-sentinel](https://github.com/VicoD3X/nlp-sentinel) | NLP / MLOps léger | Classification de sentiment, API FastAPI, Streamlit, monitoring et boucle de feedback |
-| [insight-engine](https://github.com/VicoD3X/insight-engine) | Analyst Tooling | Transformation d'un cadrage produit en pipeline analytique, JSON exploitable et dashboard React |
-
-Ces dépôts ont été sélectionnés pour couvrir une chaîne cohérente : qualité des données, SQL, apprentissage classique, passage à l'échelle, séries temporelles, NLP, API, monitoring et restitution analyste.
 
 ## Focus Expérimental
 
@@ -60,15 +60,15 @@ Le verdict actuel est volontairement transparent : le LSTM Rev4 ne bat pas la ba
 
 ### Machine Learning Appliqué
 
-`scikit-learn` · `PyTorch` · `TensorFlow` · `NLP` · `Computer Vision` · `Time Series` · `Clustering` · `Recommandation`
+`scikit-learn` · `PyTorch` · `TensorFlow` · `NLP` · `Computer Vision` · `Time Series` · `Clustering` · `Graph Analytics`
 
 Je m'intéresse particulièrement aux modèles qui peuvent être expliqués, comparés et évalués proprement. Je préfère un modèle simple avec une évaluation honnête à un modèle complexe présenté sans baseline.
 
 ### Data Engineering Léger
 
-`Python` · `SQL` · `pandas` · `PySpark` · `SQLite` · `pipelines reproductibles` · `data validation` · `reporting`
+`Python` · `SQL` · `Pandas` · `PySpark` · `SQLite` · `pipelines reproductibles` · `data validation` · `reporting`
 
-J'accorde beaucoup d'importance au travail en amont : qualité des données, cohérence des features, documentation des transformations et séparation entre exploration et code stable.
+J'accorde beaucoup d'importance au travail en amont : qualité des données, cohérence des features, documentation des transformations, séparation entre exploration et code stable, et préparation au passage à l'échelle.
 
 ### APIs, MLOps Et Monitoring
 
@@ -80,22 +80,11 @@ Mes projets cherchent à montrer des chaînes complètes : modèle, API, interfa
 
 `React` · `Vite` · `Redux Toolkit` · `Streamlit` · `GitHub Pages` · `Matplotlib` · `Plotly`
 
-Je sais prototyper des interfaces pour rendre un projet data lisible : dashboards, visualisations, pages de restitution, outils locaux d'audit ou démonstrateurs.
+Je sais prototyper des interfaces pour rendre un projet data lisible : dashboards, visualisations, pages de restitution, outils locaux d'audit ou démonstrateurs pour analystes.
 
 ## Lecture Du Portfolio
 
 Ce profil regroupe des projets retravaillés pour être lisibles par un recruteur technique : contexte clair, choix méthodologiques explicités, commandes reproductibles, tests lorsque c'est pertinent, et limites documentées.
-
-Chaque dépôt met en avant un angle précis du métier :
-
-```text
-quality-analysis  -> rigueur data quality, contrôles, reporting
-sql-segmenter     -> SQL, feature engineering, clustering
-spark-vision      -> PySpark, cloud, passage à l'échelle
-neural-exchange   -> PyTorch, séries temporelles, évaluation critique
-nlp-sentinel      -> NLP, API, interface, monitoring
-insight-engine    -> restitution analyste, dashboard, décision
-```
 
 L'ensemble vise à montrer une capacité à reprendre un sujet de bout en bout : comprendre les données, stabiliser le code, évaluer les résultats, construire une restitution claire et assumer les limites techniques.
 
@@ -118,9 +107,10 @@ L'ensemble vise à montrer une capacité à reprendre un sujet de bout en bout :
 
 - LinkedIn : [Victor Aubry](https://www.linkedin.com/in/victor-aubry-558491325/)
 - GitHub : [VicoD3X](https://github.com/VicoD3X)
+- Email : [vicaubry.pro@gmail.com](mailto:vicaubry.pro@gmail.com)
 
 <div align="center">
 
-**Applied ML · Data Quality · Forecasting Labs · Computer Vision · NLP · Data Products**
+**Applied ML · Data Quality · Forecasting Labs · Graph Analytics · NLP · Analyst Tools**
 
 </div>
