@@ -140,15 +140,6 @@ L'ensemble vise à montrer une capacité à reprendre un sujet de bout en bout :
 | Dataviz | Matplotlib · Plotly · dashboard UI |
 
 
-## Statistiques GitHub
-
-<div align="center">
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=VicoD3X&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=VicoD3X&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages" />
-
-</div>
-
 ## Contact
 
 - LinkedIn : [Victor Aubry](https://www.linkedin.com/in/victor-aubry-558491325/)
