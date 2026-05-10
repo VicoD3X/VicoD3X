@@ -48,13 +48,19 @@ MLOps léger        -> API, monitoring, feedback, reporting
 Analyst Tooling    -> Streamlit, React, dashboards, rapports exploitables
 ```
 
+## Projet De Référence
+
+[quality-analysis](https://github.com/VicoD3X/quality-analysis) est le dépôt le plus représentatif de ma façon de travailler : partir d'un dataset réel, nettoyer les données, documenter les hypothèses, produire des contrôles qualité, générer un reporting reproductible et exposer les résultats dans une interface locale.
+
+Le projet reste volontairement sobre : pas de modèle artificiel, pas de promesse métier excessive, mais un moteur d'audit qualité structuré autour de `Pandas`, de rapports JSON/Markdown/HTML, de tests légers et d'une restitution Streamlit.
+
+Il montre une compétence que je considère centrale en data science appliquée : rendre un jeu de données compréhensible, contrôlable et exploitable avant toute modélisation.
+
 ## Focus Expérimental
 
-[Neural-Exchange](https://github.com/VicoD3X/neural-exchange) est mon laboratoire le plus personnel : un projet de prévision de séries temporelles financières avec LSTM PyTorch, données de marché, variables macroéconomiques, signaux de volatilité et indicateur `Panic_Mode`.
+[Neural-Exchange](https://github.com/VicoD3X/neural-exchange) est mon laboratoire de séries temporelles avec LSTM PyTorch, données de marché, variables macroéconomiques et comparaison à des baselines causales.
 
-Le projet ne cherche pas à vendre un modèle miracle qui prédirait le marché. Il documente une démarche complète : reconstruction d'un ancien prototype, génération de données propres, entraînement Rev4, sauvegarde modèle/scaler/metadata, comparaison à des baselines causales, visualisations et limites.
-
-Le verdict actuel est volontairement transparent : le LSTM Rev4 ne bat pas la baseline `last_value` sur le MAE. Ce résultat est mis en avant parce qu'il montre que le modèle est évalué face à une référence simple, au lieu d'être présenté avec une courbe isolée.
+Il ne cherche pas à vendre un modèle miracle qui prédirait le marché. Son intérêt est surtout méthodologique : génération de données propres, entraînement reproductible, sauvegarde modèle/scaler/metadata, visualisations, analyse des résidus et documentation des limites.
 
 ## Axes Techniques
 
@@ -107,7 +113,6 @@ L'ensemble vise à montrer une capacité à reprendre un sujet de bout en bout :
 
 - LinkedIn : [Victor Aubry](https://www.linkedin.com/in/victor-aubry-558491325/)
 - GitHub : [VicoD3X](https://github.com/VicoD3X)
-- Email : [vicaubry.pro@gmail.com](mailto:vicaubry.pro@gmail.com)
 
 <div align="center">
 
