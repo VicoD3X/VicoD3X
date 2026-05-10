@@ -13,9 +13,10 @@ Je m'intéresse particulièrement aux problématiques de données volumineuses, 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Victor%20Aubry-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victor-aubry-558491325/)
 [![GitHub](https://img.shields.io/badge/GitHub-VicoD3X-181717?logo=github&logoColor=white)](https://github.com/VicoD3X)
 ![Python](https://img.shields.io/badge/Python-Data%20Science-3776AB?logo=python&logoColor=white)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Applied%20ML-F7931E)
-![FastAPI](https://img.shields.io/badge/FastAPI-APIs-009688?logo=fastapi&logoColor=white)
-![React](https://img.shields.io/badge/React-Data%20Interfaces-61DAFB?logo=react&logoColor=black)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-Applied%20ML-EE4C2C?logo=pytorch&logoColor=white)
+![PySpark](https://img.shields.io/badge/PySpark-Scale%20Ready-E25A1C?logo=apachespark&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-Analyst%20APIs-009688?logo=fastapi&logoColor=white)
 
 </div>
 
@@ -91,6 +92,8 @@ Je sais prototyper des interfaces pour rendre un projet data lisible : dashboard
 ## Lecture Du Portfolio
 
 Ce profil regroupe des projets retravaillés pour être lisibles par un recruteur technique : contexte clair, choix méthodologiques explicités, commandes reproductibles, tests lorsque c'est pertinent, et limites documentées.
+
+Les notebooks présents dans certains dépôts servent de trace exploratoire. Sur les projets principaux, la logique stabilisée est progressivement extraite en modules Python, scripts reproductibles, tests et documentation.
 
 L'ensemble vise à montrer une capacité à reprendre un sujet de bout en bout : comprendre les données, stabiliser le code, évaluer les résultats, construire une restitution claire et assumer les limites techniques.
 
