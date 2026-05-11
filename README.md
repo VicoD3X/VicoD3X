@@ -61,12 +61,6 @@ MLOps léger        -> API, monitoring, feedback, reporting
 Analyst Tooling    -> Streamlit, React, dashboards, rapports exploitables
 ```
 
-## Projet Graph Analytics
-
-[freight-network](https://github.com/VicoD3X/freight-network) est la brique la plus directe sur la modélisation en graphe. Le projet part d'un réseau synthétique de fret aérien, construit un graphe orienté pondéré avec `NetworkX`, puis calcule des métriques de centralité, de PageRank, de communautés et de résilience.
-
-L'objectif est volontairement précis : montrer comment transformer un problème logistique en structure graphe, produire des mesures interprétables, tester l'impact du retrait d'un hub et restituer les résultats sous forme de rapports et visualisations.
-
 ## Projet De Référence
 
 [quality-analysis](https://github.com/VicoD3X/quality-analysis) est le dépôt le plus représentatif de ma façon de travailler : partir d'un dataset réel, nettoyer les données, documenter les hypothèses, produire des contrôles qualité, générer un rapport reproductible et exposer les résultats dans une interface locale.
@@ -75,7 +69,7 @@ Le projet reste volontairement sobre : pas de modèle artificiel, pas de promess
 
 Il illustre un point central en data science appliquée : rendre un jeu de données compréhensible, contrôlable et exploitable avant toute modélisation.
 
-Pour les sujets graph analytics et analyst tooling, [freight-network](https://github.com/VicoD3X/freight-network) est le projet le plus directement lié.
+Pour compléter cette lecture méthodologique, [freight-network](https://github.com/VicoD3X/freight-network) montre la même logique appliquée à un problème de graph analytics.
 
 ## Focus Expérimental
 
