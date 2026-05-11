@@ -8,9 +8,9 @@
 
 ### Data Scientist Junior · Applied ML · Analyst Tools
 
-Data Scientist junior orienté data science appliquée, machine learning, qualité de données et développement d'outils exploitables.
+Data Scientist junior orienté data science appliquée, machine learning, qualité de données et outils exploitables pour analystes.
 
-Je m'intéresse particulièrement aux problématiques de données volumineuses, de modélisation, d'évaluation rigoureuse des modèles et de mise à disposition des résultats via API, dashboards ou rapports.
+Je m'intéresse aux données volumineuses, à l'évaluation rigoureuse des modèles et à la mise à disposition des résultats via API, dashboards ou rapports.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Victor%20Aubry-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victor-aubry-558491325/)
 [![GitHub](https://img.shields.io/badge/GitHub-VicoD3X-181717?logo=github&logoColor=white)](https://github.com/VicoD3X)
@@ -29,9 +29,7 @@ Je m'intéresse particulièrement aux problématiques de données volumineuses, 
 
 [freight-network](https://github.com/VicoD3X/freight-network) est le projet le plus directement lié à l'analyse de graphes : `NetworkX`, graphe orienté pondéré, centralités, PageRank, communautés et résilience d'un réseau synthétique de fret aérien.
 
-## Lecture Orientée Data Scientist / Analyst Tooling
-
-Pour une lecture rapide : [freight-network](https://github.com/VicoD3X/freight-network) couvre `NetworkX` et l'analyse de graphes, [spark-vision](https://github.com/VicoD3X/spark-vision) le passage à l'échelle avec `PySpark`, [sql-segmenter](https://github.com/VicoD3X/sql-segmenter) la segmentation et le clustering, et [quality-analysis](https://github.com/VicoD3X/quality-analysis) la qualité de données et le reporting reproductible.
+Le parcours ci-dessous complète cette lecture avec qualité de données, SQL/clustering, PySpark, séries temporelles, NLP et outils de restitution.
 
 ## Parcours De Lecture Recommandé
 
@@ -45,13 +43,11 @@ Pour une lecture rapide : [freight-network](https://github.com/VicoD3X/freight-n
 | [nlp-sentinel](https://github.com/VicoD3X/nlp-sentinel) | NLP, FastAPI, Streamlit, monitoring, feedback utilisateur, boucle MLOps légère |
 | [insight-engine](https://github.com/VicoD3X/insight-engine) | Transformation d'une analyse en outil lisible, dashboard, JSON exploitable, support décisionnel |
 
-Cette sélection couvre les briques que je veux rendre visibles en priorité : graph analytics, qualité des données, SQL, machine learning classique, passage à l'échelle, séries temporelles, NLP, API, monitoring et restitution analyste.
-
 ## Signal Principal
 
-Je suis orienté **data appliquée et outils analystes** : j'aime partir d'un problème concret, structurer les données, modéliser une approche, évaluer les résultats, puis les rendre exploitables via une API, un rapport ou une interface.
+Je suis orienté **data appliquée et outils analystes** : partir d'un problème concret, structurer les données, modéliser une approche, évaluer les résultats, puis les rendre exploitables via une API, un rapport ou une interface.
 
-Mon GitHub est organisé comme un **laboratoire technique open-source** : chaque projet met en avant un problème, une approche, des commandes de lancement et des limites.
+Chaque projet met en avant un problème, une approche, des commandes de lancement et des limites.
 
 ```text
 Data Quality       -> nettoyer, contrôler, documenter
@@ -63,19 +59,15 @@ Analyst Tooling    -> Streamlit, React, dashboards, rapports exploitables
 
 ## Projet De Référence
 
-[quality-analysis](https://github.com/VicoD3X/quality-analysis) est le dépôt le plus représentatif de ma façon de travailler : partir d'un dataset réel, nettoyer les données, documenter les hypothèses, produire des contrôles qualité, générer un rapport reproductible et exposer les résultats dans une interface locale.
+[quality-analysis](https://github.com/VicoD3X/quality-analysis) est le dépôt le plus représentatif de ma méthode : partir d'un dataset réel, nettoyer les données, documenter les hypothèses, produire des contrôles qualité et générer un rapport reproductible.
 
-Le projet reste volontairement sobre : pas de modèle artificiel, pas de promesse métier excessive, mais un moteur d'audit qualité structuré autour de `Pandas`, de rapports JSON/Markdown/HTML, de tests légers et d'une restitution Streamlit.
-
-Il illustre un point central en data science appliquée : rendre un jeu de données compréhensible, contrôlable et exploitable avant toute modélisation.
-
-Pour compléter cette lecture méthodologique, [freight-network](https://github.com/VicoD3X/freight-network) montre la même logique appliquée à un problème de graph analytics.
+Le projet reste volontairement sobre : pas de modèle artificiel, mais un moteur d'audit qualité avec `Pandas`, rapports JSON/Markdown/HTML, tests légers et restitution Streamlit.
 
 ## Focus Expérimental
 
 [Neural-Exchange](https://github.com/VicoD3X/neural-exchange) est mon laboratoire de séries temporelles avec LSTM PyTorch, données de marché, variables macroéconomiques et comparaison à des baselines causales.
 
-Il ne cherche pas à vendre un modèle miracle qui prédirait le marché. Son intérêt est surtout méthodologique : génération de données propres, entraînement reproductible, sauvegarde modèle/scaler/metadata, visualisations, analyse des résidus et documentation des limites.
+Il ne cherche pas à vendre un modèle miracle. Son intérêt est méthodologique : données propres, entraînement reproductible, modèle/scaler/metadata, visualisations, résidus et limites documentées.
 
 ## Axes Techniques
 
@@ -83,13 +75,13 @@ Il ne cherche pas à vendre un modèle miracle qui prédirait le marché. Son in
 
 `scikit-learn` · `PyTorch` · `TensorFlow` · `NLP` · `Computer Vision` · `Time Series` · `Clustering` · `Graph Analytics`
 
-Je m'intéresse particulièrement aux modèles qui peuvent être expliqués, comparés et évalués proprement. Je préfère un modèle simple avec une évaluation honnête à un modèle complexe présenté sans baseline.
+Je privilégie les modèles expliqués, comparés et évalués avec des baselines.
 
 ### Data Engineering Léger
 
 `Python` · `SQL` · `Pandas` · `PySpark` · `SQLite` · `pipelines reproductibles` · `data validation` · `reporting`
 
-Je travaille d'abord sur l'amont : qualité des données, cohérence des features, documentation des transformations, séparation entre exploration et code stable, et préparation au passage à l'échelle.
+Je travaille d'abord sur l'amont : qualité des données, cohérence des features, documentation des transformations et séparation entre exploration et code stable.
 
 ### APIs, MLOps Et Monitoring
 
@@ -103,17 +95,13 @@ En largeur technique, [nlp-sentinel](https://github.com/VicoD3X/nlp-sentinel), [
 
 `React` · `Vite` · `Redux Toolkit` · `Streamlit` · `GitHub Pages` · `Matplotlib` · `Plotly`
 
-Je prototype aussi les interfaces nécessaires à la restitution : dashboards, visualisations, pages de synthèse, outils locaux d'audit ou démonstrateurs pour analystes.
+Je prototype aussi les interfaces nécessaires à la restitution : dashboards, pages de synthèse, outils locaux d'audit et démonstrateurs pour analystes.
 
 En soutien, [bank-metrics](https://github.com/VicoD3X/bank-metrics) montre une interface orientée données avec React/Redux et analytics financiers mockés, tandis que [rental-catalog](https://github.com/VicoD3X/rental-catalog) conserve une base React/Vite plus classique autour du routage, des composants et de GitHub Pages.
 
-## Lecture Du Portfolio
+## Notebooks Et Code Stable
 
-Chaque dépôt met en avant un travail de structuration : contexte du problème, choix méthodologiques, commandes reproductibles, tests lorsque c'est pertinent, et limites documentées.
-
-Les notebooks présents dans certains dépôts servent de trace exploratoire. Sur les projets principaux, la logique stabilisée est progressivement extraite en modules Python, scripts reproductibles, tests et documentation.
-
-L'ensemble documente une façon de travailler : comprendre les données, stabiliser le code, évaluer les résultats, construire une restitution claire et assumer les limites techniques.
+Les notebooks servent de trace exploratoire. Sur les projets principaux, la logique stabilisée est extraite en modules Python, scripts reproductibles, tests et documentation.
 
 ## Stack Actuelle
 
