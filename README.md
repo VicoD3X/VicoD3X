@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="assets/profile-banner-v6.svg?v=20260510d" alt="Victor Aubry - Data Science and Data Products profile banner" width="100%" />
+<img src="assets/profile-banner-v6.svg?v=20260511a" alt="Victor Aubry - Data Science and Data Products profile banner" width="100%" />
 
-<!-- profile-refresh: 2026-05-10 -->
+<!-- profile-refresh: 2026-05-11 -->
 
 # Victor Aubry
 
@@ -24,6 +24,10 @@ Je m'intéresse particulièrement aux problématiques de données volumineuses, 
 </div>
 
 ---
+
+## À Ouvrir En Premier
+
+[freight-network](https://github.com/VicoD3X/freight-network) est le projet le plus directement lié à l'analyse de graphes : `NetworkX`, graphe orienté pondéré, centralités, PageRank, communautés et résilience d'un réseau synthétique de fret aérien.
 
 ## Lecture Orientée Data Scientist / Analyst Tooling
 
@@ -70,6 +74,8 @@ L'objectif est volontairement précis : montrer comment transformer un problème
 Le projet reste volontairement sobre : pas de modèle artificiel, pas de promesse métier excessive, mais un moteur d'audit qualité structuré autour de `Pandas`, de rapports JSON/Markdown/HTML, de tests légers et d'une restitution Streamlit.
 
 Il illustre un point central en data science appliquée : rendre un jeu de données compréhensible, contrôlable et exploitable avant toute modélisation.
+
+Pour les sujets graph analytics et analyst tooling, [freight-network](https://github.com/VicoD3X/freight-network) est le projet le plus directement lié.
 
 ## Focus Expérimental
 
