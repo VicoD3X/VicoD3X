@@ -29,7 +29,9 @@ Je m'intéresse aux données volumineuses, à l'évaluation rigoureuse des modè
 
 [freight-network](https://github.com/VicoD3X/freight-network) est le projet le plus directement lié à l'analyse de graphes : `NetworkX`, graphe orienté pondéré, centralités, PageRank, communautés et résilience d'un réseau synthétique de fret aérien.
 
-Le parcours ci-dessous complète cette lecture avec qualité de données, SQL/clustering, PySpark, séries temporelles, NLP et outils de restitution.
+[spark-vision](https://github.com/VicoD3X/spark-vision) complète ce signal avec une brique passage à l'échelle : `PySpark`, extraction distribuée de features, AWS EMR, S3 et sortie Parquet.
+
+Le parcours ci-dessous complète cette lecture avec qualité de données, SQL/clustering, séries temporelles, NLP et outils de restitution.
 
 ## Parcours De Lecture Recommandé
 
