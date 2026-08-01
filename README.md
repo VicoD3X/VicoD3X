@@ -41,74 +41,12 @@ I spend most of my time on service boundaries, VPS and dedicated servers, event 
 
 The core runs on a VPS or dedicated host. It serves snapshots and ordered events from the same runtime; state and lifecycle controls stay outside the delivery path.
 
-```mermaid
-flowchart LR
-    subgraph sources["Source plane"]
-        direction TB
-        eventSource["Event Source"]
-        snapshotSource["Snapshot Source"]
-        artifactSource["Artifact Source"]
-    end
-
-    subgraph intake["Intake and policy"]
-        direction TB
-        adapters["Adapter Gateway"]
-        contracts["Contract Gate"]
-        policy["Policy Gate"]
-    end
-
-    subgraph core["VPS / Dedicated Host"]
-        direction TB
-        ingress["Ingress Gateway"]
-        supervisor["Process Supervisor"]
-        modes["Runtime Modes"]
-        orchestrator["Orchestrator"]
-        domain["Domain Core"]
-        workers["Worker Pool"]
-        health["Health Model"]
-    end
-
-    subgraph state["State plane"]
-        direction TB
-        eventBuffer["Sequenced Buffer"]
-        snapshotStore["Snapshot / SQLite Store"]
-        cache["Bounded Cache"]
-        registry["Artifact Registry"]
-        isolation["State Isolation"]
-    end
-
-    subgraph delivery["Delivery plane"]
-        direction TB
-        api["Typed API"]
-        live["Live Stream"]
-        projection["Projection Layer"]
-        clients["Desktop and Web Clients"]
-    end
-
-    eventSource --> adapters
-    snapshotSource --> adapters
-    artifactSource --> registry
-    adapters --> contracts --> policy --> ingress --> orchestrator
-    orchestrator --> domain
-    orchestrator --> workers
-    workers --> adapters
-    registry --> domain
-    domain --> eventBuffer
-    domain --> snapshotStore
-    domain <--> cache
-    eventBuffer --> live
-    snapshotStore --> api
-    cache --> api
-    api --> projection
-    live --> projection
-    projection --> clients
-    supervisor --> modes --> orchestrator
-    orchestrator --> health --> supervisor
-    isolation -.-> snapshotStore
-    isolation -.-> cache
-    health -.-> api
-    modes -.-> live
-```
+<p align="center">
+  <picture>
+    <source media="(max-width: 640px)" srcset="assets/reference-architecture-compact.svg?v=20260802a" />
+    <img src="assets/reference-architecture.svg?v=20260802a" alt="Horizontal system architecture: sources pass through adapter and policy gates into a supervised runtime on a VPS or dedicated host; ordered events and snapshots move through bounded state to typed APIs, live streams, and desktop or web clients." width="100%" />
+  </picture>
+</p>
 
 <details>
 <summary><strong>Design notes</strong></summary>
