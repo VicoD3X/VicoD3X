@@ -5,7 +5,7 @@
 <h1 align="center">Software Engineer | Backend Architecture · AI Infrastructure</h1>
 
 <p align="center">
-  I build backend platforms for data-intensive and AI-enabled products.
+  Backend systems for data and AI workloads.
 </p>
 
 <p align="center">
@@ -30,15 +30,15 @@
 
 ## 01 — Profile
 
-I build the layer between data or models and the people who use them: APIs, background workers, state stores, live feeds, local runtimes, and operational controls.
+I work mainly in Python and TypeScript. I design APIs, background workers, stateful runtimes, live data paths, and operational tooling.
 
-My background is in data science. Today my work is centered on software architecture—how services communicate, recover, stay observable, and remain simple to operate.
+I started in data science and moved toward backend and platform work. I still use that background for model evaluation, data quality, and reproducible pipelines.
 
-**Current focus:** backend platforms, AI runtimes, event-driven flows, local-first software, and distributed processing.
+I spend most of my time on service boundaries, local-first runtimes, event delivery, model serving, health checks, and recovery.
 
 ## 02 — Reference architecture
 
-A recurring topology in the systems I build: contract-driven, local-first, and able to serve snapshots and live updates from the same runtime.
+The runtime below serves snapshots and ordered events from the same core. External sources pass through adapters and contracts; state and lifecycle controls stay outside the delivery path.
 
 ```mermaid
 flowchart LR
@@ -111,12 +111,12 @@ flowchart LR
 <details>
 <summary><strong>Design notes</strong></summary>
 
-- **Two delivery paths:** ordered events for low-latency updates; snapshots for startup, recovery, and degraded operation.
-- **Contracts at the edge:** adapters absorb provider differences before data reaches the domain core.
-- **Bounded runtime state:** caches, histories, queues, workers, and retention limits remain explicit.
-- **Separate control plane:** health, maintenance, read-only operation, and lifecycle control do not depend on the client path.
-- **Isolated runtimes:** live and test state, secrets, caches, and local storage use separate namespaces.
-- **Deterministic artifacts:** assets are verified before promotion and consumed through stable interfaces.
+- Ordered events carry live changes. Snapshots handle startup, recovery, and degraded operation.
+- External adapters normalize source-specific payloads before domain code sees them.
+- Every queue, cache, history, worker pool, and retention window has a fixed limit.
+- Health, maintenance, read-only mode, and shutdown stay available when live workers are paused.
+- Live and test runtimes keep separate state, caches, and secret namespaces.
+- New artifacts are verified before they replace the active version.
 
 </details>
 
@@ -124,17 +124,17 @@ flowchart LR
 
 | Project | System |
 | --- | --- |
-| [NLP Sentinel](https://github.com/VicoD3X/nlp-sentinel) | Typed FastAPI inference API with cached model loading, local/Azure telemetry, and feedback capture. |
-| [Spark Vision](https://github.com/VicoD3X/spark-vision) | Distributed image-feature extraction with PySpark UDFs, MobileNetV2, EMR/S3, and Parquet. |
-| [Reco Engine](https://github.com/VicoD3X/reco-engine) | Azure Functions recommendation API with Blob-backed artifacts, cold-start fallback, and a Streamlit client. |
-| [Urban Segmenter](https://github.com/VicoD3X/urban-segmenter) | Keras segmentation pipeline served through FastAPI, with local or API execution from Streamlit. |
+| [NLP Sentinel](https://github.com/VicoD3X/nlp-sentinel) | FastAPI inference API: typed schemas, cached model loading, local or Azure telemetry, and a feedback endpoint. |
+| [Spark Vision](https://github.com/VicoD3X/spark-vision) | PySpark image-feature pipeline using pandas UDFs and MobileNetV2, with Parquet output on EMR/S3. |
+| [Reco Engine](https://github.com/VicoD3X/reco-engine) | Azure Functions recommendation API with Blob-backed artifacts, an in-process cache, and a cold-start fallback. |
+| [Urban Segmenter](https://github.com/VicoD3X/urban-segmenter) | Keras segmentation pipeline served by FastAPI, with a Streamlit client that runs locally or against the API. |
 
 <details>
 <summary><strong>More engineering work</strong></summary>
 
-- [Auto-CV](https://github.com/VicoD3X/auto-cv) — local-first Python desktop workflow with SQLite repositories, deterministic document processing, adapter boundaries, and local `llama.cpp` lifecycle management.
-- [Neural Exchange](https://github.com/VicoD3X/neural-exchange) — reproducible PyTorch time-series pipeline with causal baselines, persisted artifacts, automated reports, and offline tests.
-- [Freight Network](https://github.com/VicoD3X/freight-network) — modular graph-analysis package with deterministic synthetic data, automated outputs, tests, and CI.
+- [Auto-CV](https://github.com/VicoD3X/auto-cv) — local Python desktop application built around SQLite repositories, deterministic document generation, and a managed `llama.cpp` process.
+- [Neural Exchange](https://github.com/VicoD3X/neural-exchange) — PyTorch time-series experiment with causal baselines, saved model artifacts, generated reports, and offline tests.
+- [Freight Network](https://github.com/VicoD3X/freight-network) — Python graph-analysis package using deterministic synthetic data, NetworkX metrics, generated reports, tests, and CI.
 
 </details>
 
@@ -160,4 +160,4 @@ flowchart LR
 
 ## 06 — Contact
 
-The simplest way to reach me is [LinkedIn](https://www.linkedin.com/in/victor-aubry-558491325/).
+[LinkedIn](https://www.linkedin.com/in/victor-aubry-558491325/) is the best way to reach me.
