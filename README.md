@@ -1,94 +1,163 @@
-<!--
-Future banner slot — intentionally left empty.
-When the final asset is available, place a wide, lightweight image above the hero.
-Recommended reference: assets/profile-banner.webp, approximately 4:1, width="100%".
--->
-
-<p align="center"><sub>VICTOR AUBRY</sub></p>
+<p align="center">
+  <img src="assets/profile-header.svg?v=20260802" alt="Victor Aubry — Backend Architecture and AI Infrastructure" width="100%" />
+</p>
 
 <h1 align="center">Software Engineer | Backend Architecture · AI Infrastructure</h1>
 
 <p align="center">
-I design backend systems that turn data, models, and live system state into structured application capabilities.
+  I build backend platforms for data-intensive and AI-enabled products.
 </p>
 
 <p align="center">
-<a href="https://www.linkedin.com/in/victor-aubry-558491325/">LinkedIn</a> ·
-<a href="#architecture-patterns">Architecture</a> ·
-<a href="#selected-public-systems">Selected systems</a>
+  <img src="https://img.shields.io/badge/Python-0B111C?style=flat-square&logo=python&logoColor=8FB0FF" alt="Python" />
+  <img src="https://img.shields.io/badge/TypeScript-0B111C?style=flat-square&logo=typescript&logoColor=8FB0FF" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/FastAPI-0B111C?style=flat-square&logo=fastapi&logoColor=8FB0FF" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/PyTorch-0B111C?style=flat-square&logo=pytorch&logoColor=8FB0FF" alt="PyTorch" />
+  <img src="https://img.shields.io/badge/PySpark-0B111C?style=flat-square&logo=apachespark&logoColor=8FB0FF" alt="PySpark" />
+  <img src="https://img.shields.io/badge/AWS-0B111C?style=flat-square&logo=amazonwebservices&logoColor=8FB0FF" alt="AWS" />
+  <img src="https://img.shields.io/badge/Azure-0B111C?style=flat-square&logo=microsoftazure&logoColor=8FB0FF" alt="Azure" />
+</p>
+
+<p align="center">
+  <a href="#02--reference-architecture">Architecture</a> ·
+  <a href="#03--selected-work">Projects</a> ·
+  <a href="#04--stack">Stack</a> ·
+  <a href="#05--activity">Activity</a> ·
+  <a href="https://www.linkedin.com/in/victor-aubry-558491325/">LinkedIn</a>
 </p>
 
 ---
 
-## Engineering profile
+## 01 — Profile
 
-My work sits at the intersection of backend engineering and applied AI: service boundaries, contract-driven interfaces, local-first runtimes, asynchronous processing, inference APIs, operational feedback, and distributed data pipelines.
+I build the layer between data or models and the people who use them: APIs, background workers, state stores, live feeds, local runtimes, and operational controls.
 
-Data science is the foundation of that work, not the headline. It informs how I approach data contracts, model evaluation, reproducibility, and failure modes before a capability is exposed through an API or an application.
+My background is in data science. Today my work is centered on software architecture—how services communicate, recover, stay observable, and remain simple to operate.
 
-## Architecture patterns
+**Current focus:** backend platforms, AI runtimes, event-driven flows, local-first software, and distributed processing.
 
-Selected non-public systems are represented below only as generalized, domain-neutral patterns. Product names, providers, endpoints, schemas, data models, and operational parameters are intentionally excluded.
+## 02 — Reference architecture
+
+A recurring topology in the systems I build: contract-driven, local-first, and able to serve snapshots and live updates from the same runtime.
 
 ```mermaid
-flowchart TD
-    source["Source Node"] --> policy["Policy Node"]
-    policy --> runtime["Runtime Node"]
-    runtime --> event["Event Node"]
-    runtime --> state["State Node"]
-    event --> projection["Projection Node"]
-    state --> projection
-    control["Control Node"] --> runtime
+flowchart LR
+    subgraph sources["Source plane"]
+        direction TB
+        eventSource["Event Source"]
+        snapshotSource["Snapshot Source"]
+        artifactSource["Artifact Source"]
+    end
+
+    subgraph intake["Intake and policy"]
+        direction TB
+        adapters["Adapter Gateway"]
+        contracts["Contract Gate"]
+        policy["Policy Gate"]
+    end
+
+    subgraph core["Runtime and control"]
+        direction TB
+        launcher["Operator and Launcher"]
+        modes["Runtime Modes"]
+        orchestrator["Orchestrator"]
+        domain["Domain Core"]
+        workers["Worker Pool"]
+        health["Health Model"]
+    end
+
+    subgraph state["State plane"]
+        direction TB
+        eventBuffer["Sequenced Buffer"]
+        snapshotStore["Snapshot Store"]
+        cache["Bounded Cache"]
+        registry["Artifact Registry"]
+        isolation["State Isolation"]
+    end
+
+    subgraph delivery["Delivery plane"]
+        direction TB
+        api["Typed API"]
+        live["Live Stream"]
+        projection["Projection Layer"]
+        clients["Local and Web Clients"]
+    end
+
+    eventSource --> adapters
+    snapshotSource --> adapters
+    artifactSource --> registry
+    adapters --> contracts --> policy --> orchestrator
+    orchestrator --> domain
+    orchestrator --> workers
+    workers --> adapters
+    registry --> domain
+    domain --> eventBuffer
+    domain --> snapshotStore
+    domain <--> cache
+    eventBuffer --> live
+    snapshotStore --> api
+    cache --> api
+    api --> projection
+    live --> projection
+    projection --> clients
+    launcher --> modes --> orchestrator
+    orchestrator --> health --> launcher
+    isolation -.-> snapshotStore
+    isolation -.-> cache
+    health -.-> api
+    modes -.-> live
 ```
 
-- **Authoritative inputs** — source observations remain immutable; transformation and presentation are separate concerns.
-- **Streaming with recovery** — sequenced event delivery, bounded replay, and snapshot fallback protect continuity.
-- **Bounded state** — histories, caches, queues, concurrency, and retention have explicit ceilings.
-- **Operational control** — liveness, readiness, deep health, maintenance circuit breakers, and read-only modes are designed into the runtime.
-- **Isolation by contract** — shared schemas, one-directional dependencies, separate runtime namespaces, and local secret boundaries reduce coupling.
-
-## Selected public systems
-
-| System | Engineering evidence |
-| --- | --- |
-| [NLP Sentinel](https://github.com/VicoD3X/nlp-sentinel) | FastAPI inference service with typed schemas, cached model loading, configurable local/Azure telemetry, feedback capture, tests, and CI. |
-| [Spark Vision](https://github.com/VicoD3X/spark-vision) | Distributed image-feature pipeline using PySpark, pandas UDFs, MobileNetV2, AWS EMR/S3, and Parquet outputs. |
-| [Reco Engine](https://github.com/VicoD3X/reco-engine) | Serverless recommendation prototype using Azure Functions, Blob-backed inference assets, in-process caching, cold-start fallback, and a Streamlit client. |
-| [Urban Segmenter](https://github.com/VicoD3X/urban-segmenter) | Semantic-segmentation inference lab with Keras, a FastAPI prediction endpoint, and a Streamlit client supporting local or API execution. |
-
 <details>
-<summary><strong>Additional engineering work</strong></summary>
+<summary><strong>Design notes</strong></summary>
 
-- [Auto-CV](https://github.com/VicoD3X/auto-cv) — local-first Python desktop workflow with SQLite repositories, deterministic document processing, adapter boundaries, and local `llama.cpp` lifecycle management.
-- [Neural Exchange](https://github.com/VicoD3X/neural-exchange) — reproducible PyTorch time-series pipeline with causal baselines, persisted artifacts, automated reports, and offline CI tests.
-- [Freight Network](https://github.com/VicoD3X/freight-network) — modular graph-analysis and reporting package with deterministic synthetic data, automated outputs, tests, and CI.
+- **Two delivery paths:** ordered events for low-latency updates; snapshots for startup, recovery, and degraded operation.
+- **Contracts at the edge:** adapters absorb provider differences before data reaches the domain core.
+- **Bounded runtime state:** caches, histories, queues, workers, and retention limits remain explicit.
+- **Separate control plane:** health, maintenance, read-only operation, and lifecycle control do not depend on the client path.
+- **Isolated runtimes:** live and test state, secrets, caches, and local storage use separate namespaces.
+- **Deterministic artifacts:** assets are verified before promotion and consumed through stable interfaces.
 
 </details>
 
-## Core technologies
+## 03 — Selected work
 
-| Area | Evidence across public repositories |
+| Project | System |
 | --- | --- |
-| Backend | Python · FastAPI · Pydantic · REST APIs · Azure Functions |
-| AI runtime | scikit-learn · PyTorch · TensorFlow · `llama.cpp`-compatible local inference |
-| Data systems | SQL · SQLite · pandas · PySpark · Parquet · NetworkX |
-| Application surfaces | PySide6 · Streamlit · React · Vite |
-| Delivery and operations | GitHub Actions · AWS EMR · Amazon S3 · Azure Application Insights |
+| [NLP Sentinel](https://github.com/VicoD3X/nlp-sentinel) | Typed FastAPI inference API with cached model loading, local/Azure telemetry, and feedback capture. |
+| [Spark Vision](https://github.com/VicoD3X/spark-vision) | Distributed image-feature extraction with PySpark UDFs, MobileNetV2, EMR/S3, and Parquet. |
+| [Reco Engine](https://github.com/VicoD3X/reco-engine) | Azure Functions recommendation API with Blob-backed artifacts, cold-start fallback, and a Streamlit client. |
+| [Urban Segmenter](https://github.com/VicoD3X/urban-segmenter) | Keras segmentation pipeline served through FastAPI, with local or API execution from Streamlit. |
 
-## Engineering principles
+<details>
+<summary><strong>More engineering work</strong></summary>
 
-- Keep domain logic independent from transports, frameworks, and external providers.
-- Make state ownership, failure modes, and recovery paths explicit.
-- Prefer deterministic artifacts and observable behavior over hidden runtime assumptions.
-- Start with the simplest viable execution model; distribute only where the workload requires it.
-- Treat tests, documentation, and operational controls as part of the system design.
+- [Auto-CV](https://github.com/VicoD3X/auto-cv) — local-first Python desktop workflow with SQLite repositories, deterministic document processing, adapter boundaries, and local `llama.cpp` lifecycle management.
+- [Neural Exchange](https://github.com/VicoD3X/neural-exchange) — reproducible PyTorch time-series pipeline with causal baselines, persisted artifacts, automated reports, and offline tests.
+- [Freight Network](https://github.com/VicoD3X/freight-network) — modular graph-analysis package with deterministic synthetic data, automated outputs, tests, and CI.
 
-## Current focus
+</details>
 
-Backend platforms for AI-enabled products: model-serving boundaries, local and serverless inference, resilient data flows, operational telemetry, reproducible pipelines, and distributed batch processing.
+## 04 — Stack
 
-The objective is practical: make data and model capabilities easier to run, inspect, test, and evolve as software.
+| Layer | Tools |
+| --- | --- |
+| Backend | Python · TypeScript · FastAPI · Pydantic · REST · SSE · SQLite |
+| AI runtime | PyTorch · TensorFlow · scikit-learn · local `llama.cpp` inference |
+| Data systems | SQL · pandas · PySpark · Parquet · NetworkX |
+| Applications | PySide6 · React · Vite · Streamlit |
+| Cloud and operations | AWS EMR · Amazon S3 · Azure Functions · Application Insights · GitHub Actions |
 
-## Contact
+## 05 — Activity
 
-[LinkedIn](https://www.linkedin.com/in/victor-aubry-558491325/) · [GitHub](https://github.com/VicoD3X)
+<p align="center">
+  <img src="https://github-stats-extended.vercel.app/api?username=VicoD3X&amp;show_icons=true&amp;include_all_commits=true&amp;hide_title=true&amp;hide_border=false&amp;bg_color=0D1117&amp;title_color=91A9DF&amp;text_color=C6D2EC&amp;icon_color=7F9CE0&amp;border_color=283A63" alt="Victor Aubry GitHub statistics" width="54%" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=VicoD3X&amp;bg_color=0D1117&amp;color=91A9DF&amp;line=6F8EDC&amp;point=DCE6FF&amp;area=true&amp;area_color=243A66&amp;hide_border=false&amp;border_color=283A63&amp;radius=12&amp;days=31&amp;custom_title=Engineering%20Activity" alt="Victor Aubry engineering activity graph" width="100%" />
+</p>
+
+## 06 — Contact
+
+The simplest way to reach me is [LinkedIn](https://www.linkedin.com/in/victor-aubry-558491325/).
