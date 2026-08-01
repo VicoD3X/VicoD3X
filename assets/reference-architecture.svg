@@ -1,202 +1,156 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="560" viewBox="0 0 1600 560" role="img" aria-labelledby="title desc">
-  <title id="title">Backend and AI infrastructure reference architecture</title>
-  <desc id="desc">A horizontal architecture rail connecting source adapters, policy gates, a supervised runtime on a VPS or dedicated host, bounded state, typed APIs, live streams, and desktop or web clients.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="380" viewBox="0 0 1600 380" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <title id="title">Backend and AI infrastructure</title>
+  <desc id="desc">A five-stage system rail: sources, gateway, supervised runtime, bounded state, and API or stream delivery. Operational controls sit below the runtime.</desc>
 
   <defs>
-    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0D121B"/>
-      <stop offset="0.52" stop-color="#0B1018"/>
-      <stop offset="1" stop-color="#080C12"/>
-    </linearGradient>
-    <linearGradient id="surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#131B29"/>
-      <stop offset="1" stop-color="#0E141E"/>
-    </linearGradient>
-    <linearGradient id="runtimeSurface" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#19253A"/>
-      <stop offset="0.62" stop-color="#121B2A"/>
-      <stop offset="1" stop-color="#101722"/>
-    </linearGradient>
-    <linearGradient id="rail" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#53698F"/>
-      <stop offset="0.5" stop-color="#91A9DF"/>
-      <stop offset="1" stop-color="#577B8E"/>
-    </linearGradient>
-    <linearGradient id="eventRail" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#8EA9E4"/>
-      <stop offset="1" stop-color="#7797D4"/>
-    </linearGradient>
-    <linearGradient id="snapshotRail" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#6E8D9D"/>
-      <stop offset="1" stop-color="#7FA6B6"/>
-    </linearGradient>
-    <radialGradient id="halo">
-      <stop offset="0" stop-color="#738FCB" stop-opacity="0.24"/>
-      <stop offset="1" stop-color="#738FCB" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M32 0H0V32" fill="none" stroke="#8BA2CF" stroke-opacity="0.035" stroke-width="1"/>
-    </pattern>
-    <filter id="shadow" x="-25%" y="-25%" width="150%" height="150%">
-      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#02050A" flood-opacity="0.55"/>
-    </filter>
-    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
-      <feGaussianBlur stdDeviation="8"/>
-    </filter>
-    <marker id="arrowBlue" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto" markerUnits="strokeWidth">
-      <path d="M0 0L9 4.5L0 9Z" fill="#8EA9E4"/>
-    </marker>
-    <marker id="arrowTeal" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto" markerUnits="strokeWidth">
-      <path d="M0 0L9 4.5L0 9Z" fill="#7FA6B6"/>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1L9 5L1 9Z" fill="#4493F8"/>
     </marker>
     <style>
-      text { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-      .kicker { fill:#8FA5D5; font-size:15px; font-weight:720; letter-spacing:2.8px; }
-      .diagram-title { fill:#F2F6FF; font-size:28px; font-weight:650; letter-spacing:-0.45px; }
-      .context { fill:#77859E; font-size:15px; font-weight:520; letter-spacing:0.25px; }
-      .section { fill:#94A9D5; font-size:15px; font-weight:750; letter-spacing:1.9px; }
-      .node-title { fill:#F1F5FD; font-size:23px; font-weight:650; letter-spacing:-0.25px; }
-      .body { fill:#A7B3C8; font-size:18px; font-weight:470; }
-      .body-muted { fill:#7D8BA2; font-size:16px; font-weight:450; }
-      .chip { fill:#B2C0D7; font-size:17px; font-weight:600; }
-      .micro { fill:#718099; font-size:13px; font-weight:650; letter-spacing:1.15px; }
-      .event-flow { stroke-dasharray:7 11; animation:railFlow 14s linear infinite; }
-      .snapshot-flow { stroke-dasharray:4 12; animation:railFlow 18s linear infinite reverse; }
-      .status-pulse { transform-box:fill-box; transform-origin:center; animation:statusPulse 4.8s ease-in-out infinite; }
-      @keyframes railFlow { to { stroke-dashoffset:-180; } }
-      @keyframes statusPulse { 0%, 70%, 100% { opacity:.58; transform:scale(.86); } 82% { opacity:1; transform:scale(1); } }
-      @media (prefers-reduced-motion: reduce) {
-        .event-flow, .snapshot-flow, .status-pulse { animation:none; }
-      }
+      text { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+      rect,line,path,circle,polyline { vector-effect:non-scaling-stroke; }
+      .card { fill:#161B22; stroke:#30363D; stroke-width:2; }
+      .core { fill:#161B22; stroke:#4493F8; stroke-width:2; }
+      .divider { stroke:#30363D; stroke-width:2; }
+      .title { fill:#F0F6FC; font-size:27px; font-weight:650; letter-spacing:-.35px; }
+      .label { fill:#C9D1D9; font-size:20px; font-weight:500; }
+      .pill-label { fill:#C9D1D9; font-size:18px; font-weight:600; }
+      .meta { fill:#8C959F; font-size:17px; font-weight:600; letter-spacing:.35px; }
+      .rail-base { stroke:#30363D; stroke-width:6; stroke-linecap:round; }
+      .rail { stroke:#4493F8; stroke-width:2; stroke-linecap:round; }
+      .rail-flow { stroke:#79C0FF; stroke-width:2; stroke-linecap:round; stroke-dasharray:8 12; animation:flow 13s linear infinite; }
+      .status { animation:pulse 4.5s ease-in-out infinite; transform-box:fill-box; transform-origin:center; }
+      @keyframes flow { to { stroke-dashoffset:-200; } }
+      @keyframes pulse { 0%,72%,100% { opacity:.7; } 84% { opacity:1; } }
+      @media (prefers-reduced-motion:reduce) { .rail-flow,.status { animation:none; } }
     </style>
   </defs>
 
-  <rect x="8" y="8" width="1584" height="544" rx="26" fill="url(#background)" stroke="#263248"/>
-  <rect x="9" y="9" width="1582" height="542" rx="25" fill="url(#grid)"/>
-  <ellipse cx="800" cy="270" rx="455" ry="230" fill="url(#halo)"/>
+  <rect x="4" y="4" width="1592" height="372" rx="20" fill="#0D1117" stroke="#30363D" stroke-width="2"/>
 
-  <g id="heading" aria-label="Architecture heading">
-    <text class="kicker" x="52" y="53">REFERENCE ARCHITECTURE / SIGNAL RAIL</text>
-    <text class="diagram-title" x="52" y="91">Event, state, and delivery</text>
-    <text class="context" x="1548" y="58" text-anchor="end">LINUX · DOCKER · VPS / DEDICATED</text>
-    <line x1="52" y1="113" x2="1548" y2="113" stroke="#26344A"/>
-  </g>
+  <!-- Main pipeline -->
+  <path class="rail-base" d="M36 162H1564"/>
+  <path class="rail" d="M36 162H1564"/>
+  <path class="rail-flow" d="M36 162H1564" opacity=".48"/>
+  <circle cx="30" cy="162" r="10" fill="#0D1117" stroke="#4493F8" stroke-width="2"/>
+  <circle cx="1570" cy="162" r="10" fill="#0D1117" stroke="#4493F8" stroke-width="2"/>
 
-  <g id="data-plane" aria-label="Data plane">
-    <title>Data plane</title>
-    <path d="M42 282H1558" stroke="#243149" stroke-width="10" stroke-linecap="round"/>
-    <path d="M42 282H1558" stroke="url(#rail)" stroke-width="1.5" stroke-linecap="round" opacity="0.88"/>
-    <circle cx="42" cy="282" r="20" fill="#0B111B" stroke="#405474"/>
-    <circle cx="42" cy="282" r="5" fill="#8EA8DF"/>
-    <circle cx="1558" cy="282" r="20" fill="#0B111B" stroke="#405474"/>
-    <circle cx="1558" cy="282" r="5" fill="#8EA8DF"/>
+  <path d="M254 162H290" stroke="#4493F8" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M516 162H552" stroke="#4493F8" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M902 162H938" stroke="#4493F8" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M1194 162H1230" stroke="#4493F8" stroke-width="2" marker-end="url(#arrow)"/>
 
-    <path d="M278 282H315" stroke="#8EA9E4" stroke-width="2" marker-end="url(#arrowBlue)"/>
-    <path d="M545 282H588" stroke="#8EA9E4" stroke-width="2" marker-end="url(#arrowBlue)"/>
-
-    <path d="M928 263H970" stroke="#8EA9E4" stroke-width="2" marker-end="url(#arrowBlue)"/>
-    <path class="event-flow" d="M928 263H970" stroke="#B4C7F2" stroke-width="2" opacity="0.62"/>
-
-    <path d="M928 306H970" stroke="#7FA6B6" stroke-width="2" marker-end="url(#arrowTeal)"/>
-    <path class="snapshot-flow" d="M928 306H970" stroke="#B1CFDA" stroke-width="2" opacity="0.54"/>
-
-    <path d="M1220 263H1262" stroke="#8EA9E4" stroke-width="2" marker-end="url(#arrowBlue)"/>
-    <path class="event-flow" d="M1220 263H1262" stroke="#B4C7F2" stroke-width="2" opacity="0.62"/>
-    <path d="M1220 306H1262" stroke="#7FA6B6" stroke-width="2" marker-end="url(#arrowTeal)"/>
-    <path class="snapshot-flow" d="M1220 306H1262" stroke="#B1CFDA" stroke-width="2" opacity="0.54"/>
-  </g>
-
-  <g id="source-plane" aria-label="Source plane" transform="translate(68 184)" filter="url(#shadow)">
-    <title>Source plane: events, snapshots, and artifacts</title>
-    <rect width="210" height="196" rx="18" fill="url(#surface)" stroke="#36455F"/>
-    <text class="section" x="22" y="31">SOURCE PLANE</text>
-    <text class="node-title" x="22" y="68">Inputs</text>
-    <circle cx="25" cy="102" r="4" fill="#87A1DA"/>
-    <text class="body" x="40" y="108">Ordered events</text>
-    <circle cx="25" cy="134" r="4" fill="#7997A5"/>
-    <text class="body" x="40" y="140">Snapshots</text>
-    <circle cx="25" cy="166" r="4" fill="#6E7F9A"/>
-    <text class="body" x="40" y="172">Artifacts</text>
-  </g>
-
-  <g id="intake-plane" aria-label="Intake and policy plane" transform="translate(315 205)" filter="url(#shadow)">
-    <title>Intake plane: adapters, contracts, and policy</title>
-    <rect width="230" height="154" rx="18" fill="url(#surface)" stroke="#3C4C67"/>
-    <text class="section" x="22" y="31">INTAKE + POLICY</text>
-    <text class="node-title" x="22" y="69">Adapter gateway</text>
-    <text class="body" x="22" y="103">Contract gate</text>
-    <text class="body-muted" x="22" y="129">Normalize · validate · route</text>
-  </g>
-
-  <g id="runtime-plane" aria-label="Runtime core on a VPS or dedicated host" transform="translate(588 158)" filter="url(#shadow)">
-    <title>Runtime core: supervised orchestration, domain services, workers, and AI runtime</title>
-    <rect width="340" height="248" rx="22" fill="url(#runtimeSurface)" stroke="#7189BD"/>
-    <rect x="1" y="1" width="338" height="246" rx="21" fill="none" stroke="#B3C5EB" stroke-opacity="0.08"/>
-    <text class="section" x="24" y="34">VPS / DEDICATED HOST</text>
-    <text class="node-title" x="24" y="76">Runtime core</text>
-    <text class="body-muted" x="24" y="104">Supervised service boundary</text>
-
-    <g transform="translate(24 127)">
-      <rect width="142" height="36" rx="10" fill="#0D1521" stroke="#3D5070"/>
-      <text class="chip" x="16" y="24">Orchestrator</text>
-      <rect x="150" width="142" height="36" rx="10" fill="#0D1521" stroke="#3D5070"/>
-      <text class="chip" x="166" y="24">Domain services</text>
-      <rect y="46" width="142" height="36" rx="10" fill="#0D1521" stroke="#3D5070"/>
-      <text class="chip" x="16" y="70">Worker pool</text>
-      <rect x="150" y="46" width="142" height="36" rx="10" fill="#0D1521" stroke="#4C638D"/>
-      <circle class="status-pulse" cx="167" cy="64" r="5" fill="#8CA8E4"/>
-      <circle cx="167" cy="64" r="9" fill="#718FCF" opacity="0.15" filter="url(#softGlow)"/>
-      <text class="chip" x="181" y="70">AI runtime</text>
+  <!-- Sources -->
+  <g id="sources" aria-label="Sources" transform="translate(44 60)">
+    <title>Sources: ordered events, snapshots, and artifacts</title>
+    <rect class="card" width="210" height="204" rx="14"/>
+    <g transform="translate(20 20)" stroke="#8C959F" stroke-width="2" fill="none">
+      <circle cx="7" cy="8" r="5"/><circle cx="7" cy="38" r="5"/><circle cx="30" cy="23" r="5"/>
+      <path d="M12 8H20C26 8 30 14 30 18M12 38H20C26 38 30 32 30 28"/>
     </g>
-    <text class="micro" x="24" y="230">PROCESS LIFECYCLE / BOUNDED WORK</text>
+    <text class="title" x="68" y="49">Sources</text>
+    <line class="divider" x1="18" y1="70" x2="192" y2="70"/>
+    <circle cx="26" cy="101" r="5" fill="#4493F8"/>
+    <text class="label" x="44" y="108">Events</text>
+    <circle cx="26" cy="137" r="5" fill="#58A6FF" opacity=".7"/>
+    <text class="label" x="44" y="144">Snapshots</text>
+    <circle cx="26" cy="173" r="5" fill="#A371F7"/>
+    <text class="label" x="44" y="180">Artifacts</text>
   </g>
 
-  <g id="state-plane" aria-label="State plane" transform="translate(970 205)" filter="url(#shadow)">
-    <title>State plane: sequenced events, SQLite snapshots, bounded cache, and artifact registry</title>
-    <rect width="250" height="154" rx="18" fill="url(#surface)" stroke="#3C4C67"/>
-    <text class="section" x="22" y="31">STATE PLANE</text>
-    <circle cx="25" cy="64" r="4" fill="#87A1DA"/>
-    <text class="body" x="40" y="70">Sequenced buffer</text>
-    <circle cx="25" cy="96" r="4" fill="#7997A5"/>
-    <text class="body" x="40" y="102">SQLite snapshot</text>
-    <text class="body-muted" x="22" y="131">Bounded cache · registry</text>
+  <!-- Gateway -->
+  <g id="gateway" aria-label="Gateway" transform="translate(290 78)">
+    <title>Gateway: adapters, contracts, and policy</title>
+    <rect class="card" width="226" height="168" rx="14"/>
+    <g transform="translate(20 18)" fill="none" stroke="#8C959F" stroke-width="2">
+      <path d="M4 8H30M22 0L30 8L22 16M30 30H4M12 22L4 30L12 38"/>
+    </g>
+    <text class="title" x="68" y="46">Gateway</text>
+    <line class="divider" x1="18" y1="65" x2="208" y2="65"/>
+    <text class="label" x="22" y="98">Adapters</text>
+    <text class="label" x="22" y="129">Contracts · Policy</text>
   </g>
 
-  <g id="delivery-plane" aria-label="Delivery plane" transform="translate(1262 184)" filter="url(#shadow)">
-    <title>Delivery plane: typed API, live stream, projection layer, and clients</title>
-    <rect width="270" height="196" rx="18" fill="url(#surface)" stroke="#36455F"/>
-    <text class="section" x="22" y="31">DELIVERY PLANE</text>
-    <text class="node-title" x="22" y="68">API + stream</text>
-    <circle cx="25" cy="102" r="4" fill="#87A1DA"/>
-    <text class="body" x="40" y="108">Typed API · SSE</text>
-    <circle cx="25" cy="134" r="4" fill="#7997A5"/>
-    <text class="body" x="40" y="140">Projection layer</text>
-    <circle cx="25" cy="166" r="4" fill="#6E7F9A"/>
-    <text class="body" x="40" y="172">Desktop · web</text>
+  <!-- Runtime -->
+  <g id="runtime" aria-label="Runtime core" transform="translate(552 42)">
+    <title>Runtime core on a VPS or dedicated host: orchestrator, domain services, workers, and AI runtime</title>
+    <rect class="core" width="350" height="240" rx="16"/>
+    <g transform="translate(20 19)" fill="none" stroke="#58A6FF" stroke-width="2">
+      <rect x="0" y="0" width="34" height="30" rx="5"/>
+      <line x1="8" y1="10" x2="26" y2="10"/><line x1="8" y1="20" x2="20" y2="20"/>
+      <circle cx="27" cy="20" r="2" fill="#3FB950" stroke="none"/>
+    </g>
+    <text class="title" x="68" y="48">Runtime</text>
+    <rect x="246" y="19" width="84" height="30" rx="15" fill="#1F2937" stroke="#30363D" stroke-width="2"/>
+    <circle class="status" cx="263" cy="34" r="5" fill="#3FB950"/>
+    <text class="meta" x="276" y="40">VPS</text>
+    <line class="divider" x1="18" y1="68" x2="332" y2="68"/>
+
+    <rect x="18" y="88" width="150" height="48" rx="9" fill="#21262D" stroke="#30363D" stroke-width="2"/>
+    <text class="pill-label" x="34" y="119">Orchestrator</text>
+    <rect x="182" y="88" width="150" height="48" rx="9" fill="#21262D" stroke="#30363D" stroke-width="2"/>
+    <text class="pill-label" x="198" y="119">Domain</text>
+    <rect x="18" y="150" width="150" height="48" rx="9" fill="#21262D" stroke="#30363D" stroke-width="2"/>
+    <text class="pill-label" x="34" y="181">Workers</text>
+    <rect x="182" y="150" width="150" height="48" rx="9" fill="#21262D" stroke="#30363D" stroke-width="2"/>
+    <circle cx="201" cy="174" r="5" fill="#A371F7"/>
+    <text class="pill-label" x="216" y="181">AI runtime</text>
+    <text class="meta" x="18" y="225">LINUX · DOCKER · DEDICATED</text>
   </g>
 
-  <g id="artifact-path" aria-label="Verified artifact path">
-    <title>Verified artifacts bypass the event path and enter the artifact registry</title>
-    <path d="M257 353C417 438 770 440 1012 346" fill="none" stroke="#53617A" stroke-width="1.2" stroke-dasharray="4 9" marker-end="url(#arrowBlue)" opacity="0.7"/>
-    <rect x="565" y="411" width="190" height="27" rx="13.5" fill="#0A1019" stroke="#2D3B52"/>
-    <text class="micro" x="660" y="429" text-anchor="middle">VERIFIED ARTIFACTS</text>
+  <!-- State -->
+  <g id="state" aria-label="State" transform="translate(938 78)">
+    <title>State: sequenced buffer, SQLite snapshots, bounded cache, and artifact registry</title>
+    <rect class="card" width="256" height="168" rx="14"/>
+    <g transform="translate(20 17)" fill="none" stroke="#8C959F" stroke-width="2">
+      <ellipse cx="18" cy="7" rx="17" ry="6"/><path d="M1 7V33C1 37 9 40 18 40S35 37 35 33V7"/>
+      <path d="M1 20C1 24 9 27 18 27S35 24 35 20"/>
+    </g>
+    <text class="title" x="68" y="46">State</text>
+    <line class="divider" x1="18" y1="65" x2="238" y2="65"/>
+    <rect x="18" y="83" width="102" height="29" rx="7" fill="#21262D"/>
+    <text class="pill-label" x="31" y="104">Buffer</text>
+    <rect x="134" y="83" width="104" height="29" rx="7" fill="#21262D"/>
+    <text class="pill-label" x="147" y="104">SQLite</text>
+    <rect x="18" y="124" width="102" height="29" rx="7" fill="#21262D"/>
+    <text class="pill-label" x="31" y="145">Cache</text>
+    <rect x="134" y="124" width="104" height="29" rx="7" fill="#21262D"/>
+    <text class="pill-label" x="147" y="145">Registry</text>
   </g>
 
-  <g id="control-plane" aria-label="Control plane">
-    <title>Control plane: supervisor, runtime modes, health model, and recovery</title>
-    <path d="M759 406V459M1095 359V459M1397 380V459" stroke="#4A5B76" stroke-width="1.2" stroke-dasharray="3 7"/>
-    <rect x="380" y="459" width="840" height="58" rx="29" fill="#0A1018" stroke="#2D3A50"/>
-    <text class="micro" x="410" y="493">CONTROL PLANE</text>
-    <circle cx="565" cy="488" r="4" fill="#718FCF"/>
-    <text class="body-muted" x="580" y="494">Process supervisor</text>
-    <circle cx="760" cy="488" r="4" fill="#718FCF"/>
-    <text class="body-muted" x="775" y="494">Runtime modes</text>
-    <circle cx="934" cy="488" r="4" fill="#718FCF"/>
-    <text class="body-muted" x="949" y="494">Health model</text>
-    <circle cx="1081" cy="488" r="4" fill="#718FCF"/>
-    <text class="body-muted" x="1096" y="494">Recovery</text>
+  <!-- Delivery -->
+  <g id="delivery" aria-label="Delivery" transform="translate(1230 60)">
+    <title>Delivery: typed API, live stream, and desktop or web clients</title>
+    <rect class="card" width="326" height="204" rx="14"/>
+    <g transform="translate(20 18)" fill="none" stroke="#8C959F" stroke-width="2">
+      <rect x="0" y="0" width="38" height="32" rx="5"/>
+      <path d="M8 10L14 16L8 22M19 22H29"/>
+    </g>
+    <text class="title" x="76" y="49">Delivery</text>
+    <line class="divider" x1="18" y1="70" x2="308" y2="70"/>
+    <circle cx="26" cy="102" r="5" fill="#4493F8"/>
+    <text class="label" x="44" y="109">Typed API</text>
+    <circle cx="26" cy="138" r="5" fill="#3FB950"/>
+    <text class="label" x="44" y="145">Live stream</text>
+    <circle cx="26" cy="174" r="5" fill="#8C959F"/>
+    <text class="label" x="44" y="181">Desktop · Web</text>
   </g>
 
-  <text class="micro" x="52" y="535">ORDERED EVENTS · RECOVERABLE SNAPSHOTS · ISOLATED STATE · BOUNDED RESOURCES</text>
-  <text class="micro" x="1548" y="535" text-anchor="end">REFERENCE / 01</text>
+  <!-- Operational controls -->
+  <path d="M727 282V304" stroke="#30363D" stroke-width="2" stroke-dasharray="4 5"/>
+  <g id="operations" aria-label="Operational controls" transform="translate(493 304)">
+    <title>Operational controls: supervisor, runtime modes, health, and recovery</title>
+    <rect width="614" height="48" rx="12" fill="#161B22" stroke="#30363D" stroke-width="2"/>
+    <circle cx="24" cy="24" r="7" fill="#3FB950"/>
+    <path d="M20 24L23 27L29 20" fill="none" stroke="#0D1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="pill-label" x="44" y="31">Supervisor</text>
+    <line x1="160" y1="12" x2="160" y2="36" stroke="#30363D" stroke-width="2"/>
+    <text class="pill-label" x="182" y="31">Modes</text>
+    <line x1="274" y1="12" x2="274" y2="36" stroke="#30363D" stroke-width="2"/>
+    <text class="pill-label" x="296" y="31">Health</text>
+    <line x1="389" y1="12" x2="389" y2="36" stroke="#30363D" stroke-width="2"/>
+    <text class="pill-label" x="411" y="31">Recovery</text>
+    <rect x="516" y="12" width="78" height="24" rx="12" fill="#12261A" stroke="#238636" stroke-width="2"/>
+    <text x="555" y="29" text-anchor="middle" fill="#56D364" font-size="15" font-weight="650">READY</text>
+  </g>
 </svg>
