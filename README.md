@@ -13,6 +13,7 @@
   <img src="https://img.shields.io/badge/TypeScript-0B111C?style=flat-square&logo=typescript&logoColor=8FB0FF" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Rust-0B111C?style=flat-square&logo=rust&logoColor=8FB0FF" alt="Rust" />
   <img src="https://img.shields.io/badge/Linux-0B111C?style=flat-square&logo=linux&logoColor=8FB0FF" alt="Linux" />
+  <img src="https://img.shields.io/badge/Docker-0B111C?style=flat-square&logo=docker&logoColor=8FB0FF" alt="Docker" />
   <img src="https://img.shields.io/badge/AWS-0B111C?style=flat-square&logo=amazonwebservices&logoColor=8FB0FF" alt="AWS" />
   <img src="https://img.shields.io/badge/OVHcloud-0B111C?style=flat-square&logo=ovh&logoColor=8FB0FF" alt="OVHcloud" />
   <img src="https://img.shields.io/badge/Hetzner-0B111C?style=flat-square&logo=hetzner&logoColor=8FB0FF" alt="Hetzner" />
