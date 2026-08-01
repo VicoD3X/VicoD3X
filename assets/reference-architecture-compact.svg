@@ -1,113 +1,86 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
-  <title id="title">Compact backend and AI infrastructure reference architecture</title>
-  <desc id="desc">A compact horizontal architecture rail for small screens, connecting sources, a contract gateway, a supervised runtime, bounded state, and API or stream delivery.</desc>
-
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <title id="title">Compact backend and AI infrastructure</title>
+  <desc id="desc">Sources connect through a gateway to a supervised runtime, bounded state, and API or stream delivery.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0D121B"/>
-      <stop offset="1" stop-color="#080C12"/>
-    </linearGradient>
-    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#141D2B"/>
-      <stop offset="1" stop-color="#0E141E"/>
-    </linearGradient>
-    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#1A263A"/>
-      <stop offset="1" stop-color="#111925"/>
-    </linearGradient>
-    <linearGradient id="rail" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#52698F"/>
-      <stop offset="0.5" stop-color="#91A9DF"/>
-      <stop offset="1" stop-color="#5F8192"/>
-    </linearGradient>
-    <filter id="shadow" x="-25%" y="-25%" width="150%" height="150%">
-      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#02050A" flood-opacity="0.55"/>
-    </filter>
-    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-      <path d="M0 0L8 4L0 8Z" fill="#8EA9E4"/>
-    </marker>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L8 4L0 8Z" fill="#4493F8"/></marker>
     <style>
-      text { font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
-      .kicker { fill:#8FA5D5; font-size:14px; font-weight:720; letter-spacing:2.2px; }
-      .section { fill:#94A9D5; font-size:13px; font-weight:750; letter-spacing:1.25px; }
-      .title { fill:#F1F5FD; font-size:21px; font-weight:650; }
-      .body { fill:#A5B2C7; font-size:16px; font-weight:470; }
-      .micro { fill:#73819A; font-size:12px; font-weight:650; letter-spacing:.8px; }
-      .flow { stroke-dasharray:6 10; animation:flow 14s linear infinite; }
-      .pulse { transform-box:fill-box; transform-origin:center; animation:pulse 4.8s ease-in-out infinite; }
+      text { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+      rect,line,path,circle { vector-effect:non-scaling-stroke; }
+      .card { fill:#161B22; stroke:#30363D; stroke-width:2; }
+      .core { fill:#161B22; stroke:#4493F8; stroke-width:2; }
+      .title { fill:#F0F6FC; font-size:20px; font-weight:650; }
+      .label { fill:#C9D1D9; font-size:15px; font-weight:500; }
+      .meta { fill:#8C959F; font-size:12px; font-weight:650; letter-spacing:.25px; }
+      .flow { stroke-dasharray:6 10; animation:flow 13s linear infinite; }
       @keyframes flow { to { stroke-dashoffset:-160; } }
-      @keyframes pulse { 0%,70%,100% { opacity:.58; transform:scale(.84); } 82% { opacity:1; transform:scale(1); } }
-      @media (prefers-reduced-motion:reduce) { .flow,.pulse { animation:none; } }
+      @media (prefers-reduced-motion:reduce) { .flow { animation:none; } }
     </style>
   </defs>
 
-  <rect x="6" y="6" width="948" height="348" rx="22" fill="url(#bg)" stroke="#263248"/>
-  <text class="kicker" x="30" y="36">REFERENCE ARCHITECTURE / SIGNAL RAIL</text>
-  <text class="micro" x="930" y="36" text-anchor="end">COMPACT VIEW</text>
-  <line x1="30" y1="55" x2="930" y2="55" stroke="#26344A"/>
+  <rect x="4" y="4" width="952" height="292" rx="18" fill="#0D1117" stroke="#30363D" stroke-width="2"/>
+  <path d="M18 142H942" stroke="#30363D" stroke-width="6" stroke-linecap="round"/>
+  <path d="M18 142H942" stroke="#4493F8" stroke-width="2" stroke-linecap="round"/>
+  <path class="flow" d="M18 142H942" stroke="#79C0FF" stroke-width="2" opacity=".45"/>
 
-  <path d="M20 178H940" stroke="#243149" stroke-width="9" stroke-linecap="round"/>
-  <path d="M20 178H940" stroke="url(#rail)" stroke-width="1.5" stroke-linecap="round"/>
-  <path class="flow" d="M20 178H940" stroke="#B4C7F2" stroke-width="1.5" opacity="0.32"/>
-  <circle cx="20" cy="178" r="14" fill="#0B111B" stroke="#405474"/>
-  <circle cx="20" cy="178" r="4" fill="#8EA8DF"/>
-  <circle cx="940" cy="178" r="14" fill="#0B111B" stroke="#405474"/>
-  <circle cx="940" cy="178" r="4" fill="#8EA8DF"/>
+  <g transform="translate(24 79)">
+    <rect class="card" width="132" height="126" rx="12"/>
+    <circle cx="18" cy="25" r="6" fill="#4493F8"/>
+    <text class="title" x="32" y="32">Sources</text>
+    <text class="label" x="16" y="62">Events</text>
+    <text class="label" x="16" y="87">Snapshots</text>
+    <text class="label" x="16" y="112">Artifacts</text>
+  </g>
+  <path d="M156 142H174" stroke="#4493F8" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <g transform="translate(34 108)" filter="url(#shadow)">
-    <rect width="142" height="140" rx="15" fill="url(#card)" stroke="#36455F"/>
-    <text class="section" x="16" y="25">SOURCES</text>
-    <text class="title" x="16" y="55">Inputs</text>
-    <text class="body" x="16" y="82">Events</text>
-    <text class="body" x="16" y="105">Snapshots</text>
-    <text class="body" x="16" y="128">Artifacts</text>
+  <g transform="translate(174 91)">
+    <rect class="card" width="142" height="102" rx="12"/>
+    <circle cx="18" cy="25" r="6" fill="#58A6FF"/>
+    <text class="title" x="32" y="32">Gateway</text>
+    <text class="label" x="16" y="62">Adapters</text>
+    <text class="label" x="16" y="87">Contracts</text>
+  </g>
+  <path d="M316 142H336" stroke="#4493F8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <g transform="translate(336 60)">
+    <rect class="core" width="230" height="164" rx="14"/>
+    <circle cx="20" cy="27" r="7" fill="#3FB950"/>
+    <text class="title" x="36" y="34">Runtime</text>
+    <rect x="158" y="15" width="55" height="24" rx="12" fill="#1F2937"/>
+    <text class="meta" x="185.5" y="31" text-anchor="middle">VPS</text>
+    <line x1="16" y1="52" x2="214" y2="52" stroke="#30363D" stroke-width="2"/>
+    <rect x="16" y="68" width="94" height="32" rx="7" fill="#21262D"/><text class="label" x="27" y="90">Core</text>
+    <rect x="120" y="68" width="94" height="32" rx="7" fill="#21262D"/><text class="label" x="131" y="90">Domain</text>
+    <rect x="16" y="110" width="94" height="32" rx="7" fill="#21262D"/><text class="label" x="27" y="132">Workers</text>
+    <rect x="120" y="110" width="94" height="32" rx="7" fill="#21262D"/><circle cx="134" cy="126" r="4" fill="#A371F7"/><text class="label" x="145" y="132">AI</text>
+    <text class="meta" x="16" y="157">LINUX · DOCKER</text>
+  </g>
+  <path d="M566 142H586" stroke="#4493F8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <g transform="translate(586 91)">
+    <rect class="card" width="150" height="102" rx="12"/>
+    <circle cx="18" cy="25" r="6" fill="#A371F7"/>
+    <text class="title" x="32" y="32">State</text>
+    <text class="label" x="16" y="62">Buffer · SQLite</text>
+    <text class="label" x="16" y="87">Cache · registry</text>
+  </g>
+  <path d="M736 142H756" stroke="#4493F8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <g transform="translate(756 79)">
+    <rect class="card" width="180" height="126" rx="12"/>
+    <circle cx="18" cy="25" r="6" fill="#3FB950"/>
+    <text class="title" x="32" y="32">Delivery</text>
+    <text class="label" x="16" y="62">API · Stream</text>
+    <text class="label" x="16" y="87">Desktop</text>
+    <text class="label" x="16" y="112">Web</text>
   </g>
 
-  <path d="M176 178H194" stroke="#8EA9E4" stroke-width="2" marker-end="url(#arrow)"/>
-  <g transform="translate(194 120)" filter="url(#shadow)">
-    <rect width="156" height="116" rx="15" fill="url(#card)" stroke="#3C4C67"/>
-    <text class="section" x="16" y="25">GATEWAY</text>
-    <text class="title" x="16" y="55">Intake</text>
-    <text class="body" x="16" y="82">Adapters</text>
-    <text class="body" x="16" y="105">Contracts · policy</text>
+  <path d="M451 224V241" stroke="#30363D" stroke-width="2" stroke-dasharray="4 5"/>
+  <g transform="translate(280 241)">
+    <rect width="400" height="38" rx="10" fill="#161B22" stroke="#30363D" stroke-width="2"/>
+    <circle cx="20" cy="19" r="6" fill="#3FB950"/>
+    <text class="meta" x="35" y="24">SUPERVISOR</text>
+    <text class="meta" x="151" y="24">MODES</text>
+    <text class="meta" x="228" y="24">HEALTH</text>
+    <text class="meta" x="309" y="24">RECOVERY</text>
   </g>
-
-  <path d="M350 178H370" stroke="#8EA9E4" stroke-width="2" marker-end="url(#arrow)"/>
-  <g transform="translate(370 88)" filter="url(#shadow)">
-    <rect width="232" height="180" rx="18" fill="url(#core)" stroke="#7189BD"/>
-    <text class="section" x="18" y="28">VPS / DEDICATED</text>
-    <text class="title" x="18" y="61">Runtime core</text>
-    <text class="body" x="18" y="91">Orchestrator · domain</text>
-    <text class="body" x="18" y="119">Workers · AI runtime</text>
-    <rect x="18" y="139" width="196" height="25" rx="12.5" fill="#0B121D" stroke="#3A4D6D"/>
-    <circle class="pulse" cx="32" cy="151.5" r="4" fill="#8CA8E4"/>
-    <text class="micro" x="44" y="156">SUPERVISED</text>
-  </g>
-
-  <path d="M602 178H622" stroke="#8EA9E4" stroke-width="2" marker-end="url(#arrow)"/>
-  <g transform="translate(622 120)" filter="url(#shadow)">
-    <rect width="148" height="116" rx="15" fill="url(#card)" stroke="#3C4C67"/>
-    <text class="section" x="16" y="25">STATE</text>
-    <text class="title" x="16" y="55">Bounded</text>
-    <text class="body" x="16" y="82">Buffer · SQLite</text>
-    <text class="body" x="16" y="105">Cache · registry</text>
-  </g>
-
-  <path d="M770 178H790" stroke="#8EA9E4" stroke-width="2" marker-end="url(#arrow)"/>
-  <g transform="translate(790 108)" filter="url(#shadow)">
-    <rect width="136" height="140" rx="15" fill="url(#card)" stroke="#36455F"/>
-    <text class="section" x="16" y="25">DELIVERY</text>
-    <text class="title" x="16" y="55">API + SSE</text>
-    <text class="body" x="16" y="82">Projection</text>
-    <text class="body" x="16" y="105">Desktop</text>
-    <text class="body" x="16" y="128">Web</text>
-  </g>
-
-  <path d="M486 268V285M696 236V285M858 248V285" stroke="#4A5B76" stroke-width="1" stroke-dasharray="3 6"/>
-  <rect x="250" y="285" width="460" height="40" rx="20" fill="#0A1018" stroke="#2D3A50"/>
-  <text class="micro" x="270" y="310">CONTROL</text>
-  <circle cx="354" cy="305" r="3" fill="#718FCF"/><text class="micro" x="365" y="310">SUPERVISOR</text>
-  <circle cx="483" cy="305" r="3" fill="#718FCF"/><text class="micro" x="494" y="310">HEALTH</text>
-  <circle cx="569" cy="305" r="3" fill="#718FCF"/><text class="micro" x="580" y="310">RECOVERY</text>
-  <text class="micro" x="930" y="338" text-anchor="end">EVENTS · SNAPSHOTS · ARTIFACTS</text>
 </svg>
