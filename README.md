@@ -43,8 +43,8 @@ The core runs on a VPS or dedicated host. It serves snapshots and ordered events
 
 <p align="center">
   <picture>
-    <source media="(max-width: 640px)" srcset="assets/reference-architecture-compact.svg?v=20260802a" />
-    <img src="assets/reference-architecture.svg?v=20260802a" alt="Horizontal system architecture: sources pass through adapter and policy gates into a supervised runtime on a VPS or dedicated host; ordered events and snapshots move through bounded state to typed APIs, live streams, and desktop or web clients." width="100%" />
+    <source media="(max-width: 640px)" srcset="assets/reference-architecture-compact.svg?v=20260802b" />
+    <img src="assets/reference-architecture.svg?v=20260802b" alt="Horizontal system architecture: sources pass through adapter and policy gates into a supervised runtime on a VPS or dedicated host; ordered events and snapshots move through bounded state to typed APIs, live streams, and desktop or web clients." width="100%" />
   </picture>
 </p>
 
