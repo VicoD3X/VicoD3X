@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="560" viewBox="0 0 1600 560" role="img" aria-labelledby="title desc">
+  <title id="title">Backend and AI infrastructure reference architecture</title>
+  <desc id="desc">A horizontal architecture rail connecting source adapters, policy gates, a supervised runtime on a VPS or dedicated host, bounded state, typed APIs, live streams, and desktop or web clients.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0D121B"/>
+      <stop offset="0.52" stop-color="#0B1018"/>
+      <stop offset="1" stop-color="#080C12"/>
+    </linearGradient>
+    <linearGradient id="surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#131B29"/>
+      <stop offset="1" stop-color="#0E141E"/>
+    </linearGradient>
+    <linearGradient id="runtimeSurface" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#19253A"/>
+      <stop offset="0.62" stop-color="#121B2A"/>
+      <stop offset="1" stop-color="#101722"/>
+    </linearGradient>
+    <linearGradient id="rail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#53698F"/>
+      <stop offset="0.5" stop-color="#91A9DF"/>
+      <stop offset="1" stop-color="#577B8E"/>
+    </linearGradient>
+    <linearGradient id="eventRail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8EA9E4"/>
+      <stop offset="1" stop-color="#7797D4"/>
+    </linearGradient>
+    <linearGradient id="snapshotRail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6E8D9D"/>
+      <stop offset="1" stop-color="#7FA6B6"/>
+    </linearGradient>
+    <radialGradient id="halo">
+      <stop offset="0" stop-color="#738FCB" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#738FCB" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#8BA2CF" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#02050A" flood-opacity="0.55"/>
+    </filter>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <marker id="arrowBlue" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0L9 4.5L0 9Z" fill="#8EA9E4"/>
+    </marker>
+    <marker id="arrowTeal" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0L9 4.5L0 9Z" fill="#7FA6B6"/>
+    </marker>
+    <style>
+      text { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .kicker { fill:#8FA5D5; font-size:15px; font-weight:720; letter-spacing:2.8px; }
+      .diagram-title { fill:#F2F6FF; font-size:28px; font-weight:650; letter-spacing:-0.45px; }
+      .context { fill:#77859E; font-size:15px; font-weight:520; letter-spacing:0.25px; }
+      .section { fill:#94A9D5; font-size:15px; font-weight:750; letter-spacing:1.9px; }
+      .node-title { fill:#F1F5FD; font-size:23px; font-weight:650; letter-spacing:-0.25px; }
+      .body { fill:#A7B3C8; font-size:18px; font-weight:470; }
+      .body-muted { fill:#7D8BA2; font-size:16px; font-weight:450; }
+      .chip { fill:#B2C0D7; font-size:17px; font-weight:600; }
+      .micro { fill:#718099; font-size:13px; font-weight:650; letter-spacing:1.15px; }
+      .event-flow { stroke-dasharray:7 11; animation:railFlow 14s linear infinite; }
+      .snapshot-flow { stroke-dasharray:4 12; animation:railFlow 18s linear infinite reverse; }
+      .status-pulse { transform-box:fill-box; transform-origin:center; animation:statusPulse 4.8s ease-in-out infinite; }
+      @keyframes railFlow { to { stroke-dashoffset:-180; } }
+      @keyframes statusPulse { 0%, 70%, 100% { opacity:.58; transform:scale(.86); } 82% { opacity:1; transform:scale(1); } }
+      @media (prefers-reduced-motion: reduce) {
+        .event-flow, .snapshot-flow, .status-pulse { animation:none; }
+      }
+    </style>
+  </defs>
+
+  <rect x="8" y="8" width="1584" height="544" rx="26" fill="url(#background)" stroke="#263248"/>
+  <rect x="9" y="9" width="1582" height="542" rx="25" fill="url(#grid)"/>
+  <ellipse cx="800" cy="270" rx="455" ry="230" fill="url(#halo)"/>
+
+  <g id="heading" aria-label="Architecture heading">
+    <text class="kicker" x="52" y="53">REFERENCE ARCHITECTURE / SIGNAL RAIL</text>
+    <text class="diagram-title" x="52" y="91">Event, state, and delivery</text>
+    <text class="context" x="1548" y="58" text-anchor="end">LINUX · DOCKER · VPS / DEDICATED</text>
+    <line x1="52" y1="113" x2="1548" y2="113" stroke="#26344A"/>
+  </g>
+
+  <g id="data-plane" aria-label="Data plane">
+    <title>Data plane</title>
+    <path d="M42 282H1558" stroke="#243149" stroke-width="10" stroke-linecap="round"/>
+    <path d="M42 282H1558" stroke="url(#rail)" stroke-width="1.5" stroke-linecap="round" opacity="0.88"/>
+    <circle cx="42" cy="282" r="20" fill="#0B111B" stroke="#405474"/>
+    <circle cx="42" cy="282" r="5" fill="#8EA8DF"/>
+    <circle cx="1558" cy="282" r="20" fill="#0B111B" stroke="#405474"/>
+    <circle cx="1558" cy="282" r="5" fill="#8EA8DF"/>
+
+    <path d="M278 282H315" stroke="#8EA9E4" stroke-width="2" marker-end="url(#arrowBlue)"/>
+    <path d="M545 282H588" stroke="#8EA9E4" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+    <path d="M928 263H970" stroke="#8EA9E4" stroke-width="2" marker-end="url(#arrowBlue)"/>
+    <path class="event-flow" d="M928 263H970" stroke="#B4C7F2" stroke-width="2" opacity="0.62"/>
+
+    <path d="M928 306H970" stroke="#7FA6B6" stroke-width="2" marker-end="url(#arrowTeal)"/>
+    <path class="snapshot-flow" d="M928 306H970" stroke="#B1CFDA" stroke-width="2" opacity="0.54"/>
+
+    <path d="M1220 263H1262" stroke="#8EA9E4" stroke-width="2" marker-end="url(#arrowBlue)"/>
+    <path class="event-flow" d="M1220 263H1262" stroke="#B4C7F2" stroke-width="2" opacity="0.62"/>
+    <path d="M1220 306H1262" stroke="#7FA6B6" stroke-width="2" marker-end="url(#arrowTeal)"/>
+    <path class="snapshot-flow" d="M1220 306H1262" stroke="#B1CFDA" stroke-width="2" opacity="0.54"/>
+  </g>
+
+  <g id="source-plane" aria-label="Source plane" transform="translate(68 184)" filter="url(#shadow)">
+    <title>Source plane: events, snapshots, and artifacts</title>
+    <rect width="210" height="196" rx="18" fill="url(#surface)" stroke="#36455F"/>
+    <text class="section" x="22" y="31">SOURCE PLANE</text>
+    <text class="node-title" x="22" y="68">Inputs</text>
+    <circle cx="25" cy="102" r="4" fill="#87A1DA"/>
+    <text class="body" x="40" y="108">Ordered events</text>
+    <circle cx="25" cy="134" r="4" fill="#7997A5"/>
+    <text class="body" x="40" y="140">Snapshots</text>
+    <circle cx="25" cy="166" r="4" fill="#6E7F9A"/>
+    <text class="body" x="40" y="172">Artifacts</text>
+  </g>
+
+  <g id="intake-plane" aria-label="Intake and policy plane" transform="translate(315 205)" filter="url(#shadow)">
+    <title>Intake plane: adapters, contracts, and policy</title>
+    <rect width="230" height="154" rx="18" fill="url(#surface)" stroke="#3C4C67"/>
+    <text class="section" x="22" y="31">INTAKE + POLICY</text>
+    <text class="node-title" x="22" y="69">Adapter gateway</text>
+    <text class="body" x="22" y="103">Contract gate</text>
+    <text class="body-muted" x="22" y="129">Normalize · validate · route</text>
+  </g>
+
+  <g id="runtime-plane" aria-label="Runtime core on a VPS or dedicated host" transform="translate(588 158)" filter="url(#shadow)">
+    <title>Runtime core: supervised orchestration, domain services, workers, and AI runtime</title>
+    <rect width="340" height="248" rx="22" fill="url(#runtimeSurface)" stroke="#7189BD"/>
+    <rect x="1" y="1" width="338" height="246" rx="21" fill="none" stroke="#B3C5EB" stroke-opacity="0.08"/>
+    <text class="section" x="24" y="34">VPS / DEDICATED HOST</text>
+    <text class="node-title" x="24" y="76">Runtime core</text>
+    <text class="body-muted" x="24" y="104">Supervised service boundary</text>
+
+    <g transform="translate(24 127)">
+      <rect width="142" height="36" rx="10" fill="#0D1521" stroke="#3D5070"/>
+      <text class="chip" x="16" y="24">Orchestrator</text>
+      <rect x="150" width="142" height="36" rx="10" fill="#0D1521" stroke="#3D5070"/>
+      <text class="chip" x="166" y="24">Domain services</text>
+      <rect y="46" width="142" height="36" rx="10" fill="#0D1521" stroke="#3D5070"/>
+      <text class="chip" x="16" y="70">Worker pool</text>
+      <rect x="150" y="46" width="142" height="36" rx="10" fill="#0D1521" stroke="#4C638D"/>
+      <circle class="status-pulse" cx="167" cy="64" r="5" fill="#8CA8E4"/>
+      <circle cx="167" cy="64" r="9" fill="#718FCF" opacity="0.15" filter="url(#softGlow)"/>
+      <text class="chip" x="181" y="70">AI runtime</text>
+    </g>
+    <text class="micro" x="24" y="230">PROCESS LIFECYCLE / BOUNDED WORK</text>
+  </g>
+
+  <g id="state-plane" aria-label="State plane" transform="translate(970 205)" filter="url(#shadow)">
+    <title>State plane: sequenced events, SQLite snapshots, bounded cache, and artifact registry</title>
+    <rect width="250" height="154" rx="18" fill="url(#surface)" stroke="#3C4C67"/>
+    <text class="section" x="22" y="31">STATE PLANE</text>
+    <circle cx="25" cy="64" r="4" fill="#87A1DA"/>
+    <text class="body" x="40" y="70">Sequenced buffer</text>
+    <circle cx="25" cy="96" r="4" fill="#7997A5"/>
+    <text class="body" x="40" y="102">SQLite snapshot</text>
+    <text class="body-muted" x="22" y="131">Bounded cache · registry</text>
+  </g>
+
+  <g id="delivery-plane" aria-label="Delivery plane" transform="translate(1262 184)" filter="url(#shadow)">
+    <title>Delivery plane: typed API, live stream, projection layer, and clients</title>
+    <rect width="270" height="196" rx="18" fill="url(#surface)" stroke="#36455F"/>
+    <text class="section" x="22" y="31">DELIVERY PLANE</text>
+    <text class="node-title" x="22" y="68">API + stream</text>
+    <circle cx="25" cy="102" r="4" fill="#87A1DA"/>
+    <text class="body" x="40" y="108">Typed API · SSE</text>
+    <circle cx="25" cy="134" r="4" fill="#7997A5"/>
+    <text class="body" x="40" y="140">Projection layer</text>
+    <circle cx="25" cy="166" r="4" fill="#6E7F9A"/>
+    <text class="body" x="40" y="172">Desktop · web</text>
+  </g>
+
+  <g id="artifact-path" aria-label="Verified artifact path">
+    <title>Verified artifacts bypass the event path and enter the artifact registry</title>
+    <path d="M257 353C417 438 770 440 1012 346" fill="none" stroke="#53617A" stroke-width="1.2" stroke-dasharray="4 9" marker-end="url(#arrowBlue)" opacity="0.7"/>
+    <rect x="565" y="411" width="190" height="27" rx="13.5" fill="#0A1019" stroke="#2D3B52"/>
+    <text class="micro" x="660" y="429" text-anchor="middle">VERIFIED ARTIFACTS</text>
+  </g>
+
+  <g id="control-plane" aria-label="Control plane">
+    <title>Control plane: supervisor, runtime modes, health model, and recovery</title>
+    <path d="M759 406V459M1095 359V459M1397 380V459" stroke="#4A5B76" stroke-width="1.2" stroke-dasharray="3 7"/>
+    <rect x="380" y="459" width="840" height="58" rx="29" fill="#0A1018" stroke="#2D3A50"/>
+    <text class="micro" x="410" y="493">CONTROL PLANE</text>
+    <circle cx="565" cy="488" r="4" fill="#718FCF"/>
+    <text class="body-muted" x="580" y="494">Process supervisor</text>
+    <circle cx="760" cy="488" r="4" fill="#718FCF"/>
+    <text class="body-muted" x="775" y="494">Runtime modes</text>
+    <circle cx="934" cy="488" r="4" fill="#718FCF"/>
+    <text class="body-muted" x="949" y="494">Health model</text>
+    <circle cx="1081" cy="488" r="4" fill="#718FCF"/>
+    <text class="body-muted" x="1096" y="494">Recovery</text>
+  </g>
+
+  <text class="micro" x="52" y="535">ORDERED EVENTS · RECOVERABLE SNAPSHOTS · ISOLATED STATE · BOUNDED RESOURCES</text>
+  <text class="micro" x="1548" y="535" text-anchor="end">REFERENCE / 01</text>
+</svg>
