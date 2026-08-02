@@ -64,6 +64,7 @@ The core runs on a VPS or dedicated host. It serves snapshots and ordered events
 
 | Project | System |
 | --- | --- |
+| [SCG Infrastructure](https://github.com/VicoD3X/scg-infra-public) | Supervised Rust control-plane node with revisioned SQLite state, ordered SSE events, deterministic service lifecycles, and isolated runtime environments. |
 | [NLP Sentinel](https://github.com/VicoD3X/nlp-sentinel) | FastAPI inference API: typed schemas, cached model loading, file-based or Azure telemetry, and a feedback endpoint. |
 | [Spark Vision](https://github.com/VicoD3X/spark-vision) | PySpark image-feature pipeline using pandas UDFs and MobileNetV2, with Parquet output on EMR/S3. |
 | [Reco Engine](https://github.com/VicoD3X/reco-engine) | Azure Functions recommendation API with Blob-backed artifacts, an in-process cache, and a cold-start fallback. |
